@@ -54,7 +54,7 @@ public class Main {
     public static void printArray(double[][] e){
         for (double[] doubles : e) {
             for (int j = 0; j < e[0].length; j++) {
-                System.out.printf("%-11.3f", doubles[j]);
+                System.out.printf("%-5.3f", doubles[j]);
                 System.out.print("\t");
             }
             System.out.println();
