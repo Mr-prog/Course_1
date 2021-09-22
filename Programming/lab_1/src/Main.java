@@ -40,7 +40,7 @@ public class Main {
                     e[i][j] = Math.cbrt(Math.asin(Math.exp(-(Math.abs(x)))));
 
                 }
-                else if(Arrays.stream(cond_one).anyMatch(m -> m == c)){
+                else if(firstCond(cond_one, c)){
                     e[i][j] = Math.pow(Math.pow(Math.atan((x+1)/24), (Math.tan(x) - 1) / Math.sin(x)), 2);
                 }
                 else {
@@ -59,5 +59,13 @@ public class Main {
             }
             System.out.println();
         }
+    }
+    public static boolean firstCond(long a[], long b){
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == b){
+                return true;
+            }
+        }
+        return false;
     }
 }
