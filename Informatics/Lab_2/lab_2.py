@@ -25,7 +25,7 @@ def rightResult(nums):
             nums[count] = "0"
         else:
             nums[count] = "1"
-        return ("Правильный ответ: " + ("".join(list(map(str,nums)))))
+        return ("Правильный ответ: " + ("".join(list(map(str,nums)))) + "; Ошибка в бите: " + str(count + 1))
 
 while True:
     print("Введите сообщение")
