@@ -1,6 +1,6 @@
 def check(a):
     for i in range(len(nums)):
-        if int(a[i]) != 1 or int(a[i])!= 0:
+        if int(a[i]) != 1 and int(a[i])!= 0:
             return False
         a.pop(0)
     return True
@@ -30,7 +30,8 @@ def rightResult(nums):
 while True:
     print("Введите сообщение")
     nums = str(input())
-    if len(nums) != 7 or check(nums):
+    if len(nums) != 7 and check(nums):
+        print("Некорректный ввод")
         continue
     print(rightResult(nums))
     break
