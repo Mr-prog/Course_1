@@ -1,0 +1,72 @@
+chmod -Rf 777 lab0
+rm -rf lab0
+mkdir lab0
+cd lab0
+	mkdir mantyke3
+	echo 'Ходы Aqua Tail Block Earth Power Icy Wind Iron Defense\nIron Head Iron Tail Low Kick Sleep Talk Snore Steath Rock\nSuperpower' >carracosta3
+	cd mantyke3
+		mkdir yanma
+		mkdir octillery
+		mkdir nidorino
+		echo 'weigth=74.7 height=43.0 atk=8 def=8' >politoed
+		echo 'Тип\nдиеты Herbivore\nalakazam:\nВозможности Overland=7 Surface=3 Jump=2\nPower=2 Intelligence=7 Aura=0 Telekinetic=0\Telepath=0' >watchog
+		touch alakazam
+		cd ..
+	mkdir quilava9
+	cd quilava9
+		echo 'Способности Swarm Shed Skin Shield\nDust' >metapod
+		mkdir porygon
+		mkdir samurott
+		echo 'Развитые способности Adaptability' >feebas
+		mkdir dewgong
+		echo 'Тип покемона:\nPHYCHIC NONE' >grumpig
+		cd ..
+	echo 'Возможности Overland=9 Surface=3 Sky=8 Jump=5\nPower4=0 Intelligence=4' >scizor0
+	echo 'Тип диеты\nCarnivore' >skorupi5
+	mkdir solosis5
+	cd solosis5
+		echo 'weigth=132.3 heigth=51.0 atk=8\ndef=9' >nidoqueen
+		echo 'Тип диеты Omnivore Phototroph' >venusaur
+		mkdir golduck
+		cd ..
+	chmod 620 mantyke3/carracosta3
+	chmod u=rx,g=w--,o=r-- mantyke3/yanma
+	chmod u=rx,g=rxw,o=xw mantyke3/octillery
+	chmod u=rwx,g=rw-,o=r-- mantyke3/nidorino
+	chmod 044 mantyke3/politoed
+	chmod u=-wx,g=rwx,o=r-- mantyke3
+	chmod 444 quilava9/metapod
+	chmod u=-wx,g=-wx,o=r-x quilava9/porygon
+	chmod u=x,g=w,o=r quilava9/samurott
+	chmod u=r,g=r,o=--- quilava9/feebas 
+	chmod u=rwx,g=rwx,o=rwx quilava9
+	chmod 711 solosis5
+	chmod 006 skorupi5
+	chmod u=rw,g=r,o=--- scizor0
+	chmod 600 solosis5/venusaur
+	chmod u=rwx,g=-wx,o=rw- solosis5/golduck
+	chmod u=rw,g=---,o=--- solosis5/nidoqueen
+	chmod 777 mantyke3
+	chmod 777 carracosta3
+	chmod u=rwx,g=rwx,o=rwx quilava9
+	chmod 777 quilava9/porygon
+	cp /home/s339055/ОПД/lab0/lab0/carracosta3 /home/s339055/ОПД/lab0/lab0/mantyke3/yanma	
+	cp -R /home/s339055/ОПД/lab0/lab0/mantyke3 /home/s339055/ОПД/lab0/lab0/quilava9/porygon
+	cat /home/s339055/ОПД/lab0/lab0/mantyke3/politoed /home/s339055/ОПД/lab0/lab0/quilava9/metapod > /home/s339055/ОПД/lab0/lab0/carracosta3_73
+	ln /home/s339055/ОПД/lab0/lab0/carracosta3 /home/s339055/ОПД/lab0/lab0/solosis5/venusaurcarracosta
+	ln -s /home/s339055/ОПД/lab0/lab0/carracosta3 /home/s339055/ОПД/lab0/lab0/mantyke3/alakazamcarracosta
+	cp /home/s339055/ОПД/lab0/lab0/carracosta3 /home/s339055/ОПД/lab0/lab0/quilava9/grumpigcarracosta	
+	ln -s /home/s339055/ОПД/lab0/lab0/quilava9 /home/s339055/ОПД/lab0/lab0/Copy_80
+	wc -w /home/s339055/ОПД/lab0/lab0/mantyke3/politoed /home/s339055/ОПД/lab0/lab0/mantyke3/watchog /home/s339055/ОПД/lab0/lab0/mantyke3/alakazam /home/s339055/ОПД/lab0/lab0/quilava9/metapod /home/s339055/ОПД/lab0/lab0/quilava9/feebas /home/s339055/ОПД/lab0/lab0/quilava9/grumpig | sort
+	ls -lh /home/s339055/ОПД/lab0/lab0/* | grep 'n$' | tail -3 | sort -r
+	cat /home/s339055/ОПД/lab0/lab0/mantyke3/politoed /home/s339055/ОПД/lab0/lab0/mantyke3/watchog /home/s339055/ОПД/lab0/lab0/mantyke3/alakazam /home/s339055/ОПД/lab0/lab0/quilava9/metapod /home/s339055/ОПД/lab0/lab0/quilava9/feebas /home/s339055/ОПД/lab0/lab0/quilava9/grumpig /home/s339055/ОПД/lab0/lab0/solosis5/nidoqueen | sort -r
+	ls -e /home/s339055/ОПД/lab0/lab0/g* */g* */*/g* | sort -r 
+	cat /home/s339055/ОПД/lab0/lab0/*d */*d */*/*d 2>/dev/null | sort -r
+	wc -l /home/s339055/ОПД/lab0/lab0/quilava9/metapod /home/s339055/ОПД/lab0/lab0/quilava9/feebas 2>/dev/null | sort -r
+	rm carracosta3
+	rm mantyke3/politoed
+	rm Copy_*
+	rm solosis5/venusaurcarracos*
+	rm -rf mantyke3
+	rmdir mantyke3/octillery
+
