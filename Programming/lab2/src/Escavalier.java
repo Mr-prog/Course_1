@@ -3,7 +3,7 @@ import ru.ifmo.se.pokemon.*;
 public class Escavalier extends Pokemon {
     Escavalier(String name, int level){
         super(name, level);
-        addType(Type.PSYCHIC);
+        addType(Type.BUG);
         setStats(70, 135, 105, 20, 60, 105);
         setMove(new NastyPlot(), new ShadowBall(), new Swagger(), new ZenHeadbutt());
     }
