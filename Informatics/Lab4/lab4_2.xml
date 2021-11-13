@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" ?>
+<all>
+	<item type="str">{
+</item>
+	<item type="str">    &quot;Tuesday&quot;: {
+</item>
+	<item type="str">        &quot;lesson&quot;: [
+</item>
+	<item type="str">        {
+</item>
+	<item type="str">            &quot;time&quot; : &quot;10:00-11:30&quot;,
+</item>
+	<item type="str">            &quot;week&quot; : &quot;3, 5, 7, 9, 11, 13, 15, 17&quot;,
+</item>
+	<item type="str">            &quot;auditory&quot; : &quot;Актовый зал&quot;,
+</item>
+	<item type="str">            &quot;campus&quot; : &quot;Кронверкский пр., д.49, лит.А&quot;,
+</item>
+	<item type="str">            &quot;subject&quot; : &quot;Дискретная математика(Прак)&quot;,
+</item>
+	<item type="str">            &quot;teacher&quot; : &quot;Поляков Владимир Иванович&quot;,
+</item>
+	<item type="str">            &quot;format&quot; : &quot;Очно - дистанционный&quot;
+</item>
+	<item type="str">        },
+</item>
+	<item type="str">        {
+</item>
+	<item type="str">            &quot;time&quot; : &quot;11:40-13:10&quot;,
+</item>
+	<item type="str">            &quot;week&quot; : &quot;3, 5, 7, 9, 11, 13, 15, 17&quot;,
+</item>
+	<item type="str">            &quot;auditory&quot; : &quot;Актовый зал&quot;,
+</item>
+	<item type="str">            &quot;campus&quot; : &quot;Кронверкский пр., д.49, лит.А&quot;,
+</item>
+	<item type="str">            &quot;subject&quot; : &quot;Дискретная математика(Прак)&quot;,
+</item>
+	<item type="str">            &quot;teacher&quot; : &quot;Поляков Владимир Иванович&quot;,
+</item>
+	<item type="str">            &quot;format&quot; : &quot;Очно - дистанционный&quot;
+</item>
+	<item type="str">        },
+</item>
+	<item type="str">        {
+</item>
+	<item type="str">            &quot;time&quot; : &quot;13:30-15:00&quot;,
+</item>
+	<item type="str">            &quot;week&quot; : &quot;Четная неделя&quot;,
+</item>
+	<item type="str">            &quot;auditory&quot; : &quot;Актовый зал&quot;,
+</item>
+	<item type="str">            &quot;campus&quot; : &quot;Кронверкский пр., д.49, лит.А&quot;,
+</item>
+	<item type="str">            &quot;subject&quot; : &quot;Дискретная математика(Прак)&quot;,
+</item>
+	<item type="str">            &quot;teacher&quot; : &quot;Поляков Владимир Иванович&quot;,
+</item>
+	<item type="str">            &quot;format&quot; : &quot;Очно - дистанционный&quot;
+</item>
+	<item type="str">        }]
+</item>
+	<item type="str">    }
+</item>
+	<item type="str">}</item>
+</all>

@@ -14,6 +14,7 @@ class Scratch extends PhysicalMove{
         super(Type.NORMAL, 40, 1.0);
     }
 
+    @Override
     protected void applyOppDamage(Pokemon def, double damage) {
         def.setMod(Stat.HP, (int) Math.round(damage));
     }
@@ -28,6 +29,7 @@ class Confide extends StatusMove{
         super(Type.NORMAL, 0, 1.0);
     }
 
+    @Override
     protected void applyOppEffects(Pokemon p) {
         Effect LowSpAt = new Effect().stat(Stat.SPECIAL_ATTACK, -1);
         p.setCondition(LowSpAt);

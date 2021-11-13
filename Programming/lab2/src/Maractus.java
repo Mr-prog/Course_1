@@ -13,6 +13,7 @@ class ShadowBall extends SpecialMove{
     ShadowBall(){
         super(Type.GHOST, 80.0,1.0);
     }
+    @Override
     protected void applyOppEffects(Pokemon p) {
         Effect LowArmor = new Effect().chance(0.2).turns(1).stat(Stat.DEFENSE, -1);
         p.setCondition(LowArmor);

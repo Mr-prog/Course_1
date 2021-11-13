@@ -1,0 +1,33 @@
+﻿
+    <Tuesday>
+        <lesson>
+        
+            <time>10:00-11:30</time>
+            <week>3, 5, 7, 9, 11, 13, 15, 17</week>
+            <auditory>Актовый зал</auditory>
+            <campus>Кронверкский пр., д.49, лит.А</campus>
+            <subject>Дискретная математика(Прак)</subject>
+            <teacher>Поляков Владимир Иванович</teacher>
+            <format>Очно - дистанционный</format>
+        </lesson>
+        <lesson>
+            <time>11:40-13:10</time>
+            <week>3, 5, 7, 9, 11, 13, 15, 17</week>
+            <auditory>Актовый зал</auditory>
+            <campus>Кронверкский пр., д.49, лит.А</campus>
+            <subject>Дискретная математика(Прак)</subject>
+            <teacher>Поляков Владимир Иванович</teacher>
+            <format>Очно - дистанционный</format>
+        </lesson>
+        <lesson>
+            <time>13:30-15:00</time>
+            <week>Четная неделя</week>
+            <auditory>Актовый зал</auditory>
+            <campus>Кронверкский пр., д.49, лит.А</campus>
+            <subject>Дискретная математика(Прак)</subject>
+            <teacher>Поляков Владимир Иванович</teacher>
+            <format>Очно - дистанционный</format>
+        </lesson>
+    
+
+	</Tuesday>

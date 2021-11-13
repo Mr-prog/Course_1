@@ -1,6 +1,6 @@
 import pygame as pg
 
-width, height = 400, 250
+width, height = 900, 250
 FPS = 30
 
 pg.init()
@@ -10,7 +10,7 @@ screen = pg.display.set_mode(size)
 screen.fill((0, 0, 0))
 clock = pg.time.Clock()
 font = pg.font.Font(None, 250)
-smile = font.render(":<{|", True, (255, 255, 255))
+smile = font.render("SEMEN", True, (255, 255, 255))
 
 run = True
 while run:
