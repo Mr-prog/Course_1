@@ -1,4 +1,5 @@
 public abstract class Item {
+    private String name;
     protected Object DataTime;
     private double weight;
     private int distance;

@@ -1,11 +1,13 @@
 import codecs
 p = codecs.open("lab4.json", "r", "utf_8_sig")
 o = codecs.open("lab4.xml", "w", "utf_8_sig")
-arr_keys = []
-main_key = []
-count_in = -1
-count_out = 0
-chek = 1
+o.write("<DAY>")
+endScp = 1
+arrKeys = []
+countKeys = -1
+specialKey = ""
+startArr = False
+startArrScp = False
 for line in p:
     line_xml = line
     check_quotes = 0
@@ -23,8 +25,8 @@ for line in p:
             while line[check] != "\"":
                 key += line[check]
                 check += 1
+            specialKey = key
             line_xml = line_xml.replace("\"" + key + "\"", "<" + key + ">")
-            first_key.append(key)
         elif line[i] == "\"" and check_quotes == 3:
             while line[check] != "\"":
                 param += line[check]
@@ -33,40 +35,48 @@ for line in p:
             line_xml = line_xml.replace(" : \"" + param + "\"", param + "</" + key + ">")
             key = ""
             param = ""
-    if check_quotes == 2 and line.count("["):
-        arr_keys.append(first_key[0])
-        line_xml = line_xml.replace(": [", "", 1)
-        line_xml = line_xml.replace("[", "", 1)
-    if line.count("{") and count_out < 2:
-        main_key.append(key)
-        line_xml = line_xml.replace(": {", "", 1)
+
+    if endScp == 1 and line_xml.count("{"):
         line_xml = line_xml.replace("{", "", 1)
-        count_out += 1
-    elif line.count("{"):
-        arr_keys.append(key)
-        line_xml = line_xml.replace(": {", "<" + arr_keys[count_in] + ">", 1)
-        line_xml = line_xml.replace("{", "<" + arr_keys[count_in] + ">", 1)
-        count_out += 1
-        chek += 1
-    elif line.count("["):
-        line_xml = line_xml.replace(": [", "", 1)
-        count_out -= 1
-        count_in += 1
-    elif line.count("{"):
-        line_xml = line_xml.replace(": {", "", 1)
+        endScp -= 1
+    if line.count("["):
+        startArr = True
+        arrKeys.append(specialKey)
+        countKeys += 1
+        line_xml = line_xml.replace("<" + specialKey + ">", "", 1)
+    if startArr:
+
+        line_xml = line_xml.replace("{", "<"+arrKeys[countKeys]+">",1)
+        line_xml = line_xml.replace("}", "</" + arrKeys[countKeys] + ">", 1)
+
+        if line.count("]"):
+            startArr = False
+            countKeys -= 1
+            print(arrKeys)
+            startArrScp = False
+    elif line_xml.count("{") and (not startArr):
         line_xml = line_xml.replace("{", "", 1)
-        chek += 1
-    if line.count("]"):
-        line_xml = line_xml.replace("]", "", 1)
-    if line.count("}") and chek == 1:
-        line_xml = line_xml.replace("},", "</" + arr_keys[count_in] + ">", 1)
-        line_xml = line_xml.replace("}", "</" + arr_keys[count_in] + ">", 1)
-        chek -= 1
-    elif line.count("}"):
-        line_xml = line_xml.replace("},", "", 1)
-        line_xml = line_xml.replace("}", "", 1)
+        arrKeys.append(specialKey)
+        countKeys += 1
+    elif line_xml.count("}"):
+        try:
+            line_xml = line_xml.replace("}", "</"+arrKeys[countKeys]+">",1)
+        except:
+            pass
+        countKeys -= 1
+    if countKeys == -1:
+        arrKeys = []
+    line_xml = line_xml.replace(">,", ">")
+    line_xml = line_xml.replace(">: [", ">")
+    line_xml = line_xml.replace(">[", ">")
+    line_xml = line_xml.replace(">:[", ">")
+    line_xml = line_xml.replace(">:", ">")
+    line_xml = line_xml.replace(">]", ">")
+    line_xml = line_xml.replace("}", "")
+    line_xml = line_xml.replace(":[", "", 1)
     o.write(line_xml)
-o.write("\n" + "\t" + "</" + main_key[1] + ">")
+
+o.write("</DAY>")
 o.close()
 
 
