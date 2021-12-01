@@ -1,12 +1,23 @@
 public abstract class Human {
-    String name;
-    double weight;
-    Human(double weight){
-        this.weight = weight;
-    }
-    Human(String name, double weight){
-        this.name = name;
-        this.weight = weight;
+    private String name;
+    private Temper temper;
+    private Talent talent;
+
+    Human(Talent talent, Temper temper) {
+        this.temper = temper;
+        this.talent = talent;
     }
 
+    Human(String name, Talent talent, Temper temper) {
+        this(talent, temper);
+        this.name = name;
+    }
+
+    public Temper getTemper() {
+        return temper;
+    }
+
+    public Talent getTalent() {
+        return talent;
+    }
 }

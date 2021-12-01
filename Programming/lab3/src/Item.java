@@ -1,36 +1,24 @@
-public abstract class Item {
+public class Item {
+
+    private double coordinateX;
+    private double coordinateY;
     private String name;
-    protected Object DataTime;
-    private double weight;
-    private int distance;
-    private int worldTime;
-    public Item(double weight, int distance, int worldTime){
-        this.weight = weight;
-        this.distance = distance;
-        this.worldTime = worldTime;
-    }
-    public int getWorldTime() {
-        return worldTime;
+    public Item(double coordinateX, double coordinateY, String name) {
+
+        this.coordinateX = coordinateX;
+        this.coordinateY = coordinateY;
+        this.name = name;
     }
 
-    public void setWorldTime(int worldTime) {
-        this.worldTime = worldTime;
+    public double getCoordinateX() {
+        return coordinateX;
     }
 
-    public void setDistance(int distance) {
-        this.distance = distance;
+    public double getCoordinateY() {
+        return coordinateY;
     }
 
-    public void setWeight(double weight) {
-        this.weight = weight;
+    public String getName() {
+        return name;
     }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public int getDistance() {
-        return distance;
-    }
-
 }
