@@ -1,5 +1,3 @@
-import com.sun.org.apache.xpath.internal.functions.FuncFalse;
-
 public class Scientist extends Human{
 
     Scientist(String name, Talent talent, Temper temper) {
