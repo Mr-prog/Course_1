@@ -1,0 +1,9 @@
+mkdir build
+cd ..
+javac -d lab/build lab/Main.java lab/*/*.java
+cd lab
+echo "Manifest-Version: 1.0" >MANIFEST.MF
+echo "Main-Class: Main" >>MANIFEST.MF
+echo >>MANIFEST.MF
+jar cfm Main.jar MANIFEST.MF -C build .
+java -jar Main.jar
