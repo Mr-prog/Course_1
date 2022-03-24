@@ -32,7 +32,9 @@ public class Experiment implements ContinuaAble {
         weightlessnessDevice.putItem(lunCrystal);
         fuchsia.chekLuneCrustal(lunCrystal);
 
+        ContinuaAble continuaAble = (a -> System.out.println(a));
 
+        continuaAble.checkContinuaAble(true);
         GetTemper getTemperZN = znayka::getTemper;
         GetTemper getTemperSL = seledochka::getTemper;
         if (scientist.getTalent() != Talent.SILLY) {
