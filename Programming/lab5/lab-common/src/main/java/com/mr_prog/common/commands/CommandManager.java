@@ -2,6 +2,10 @@ package com.mr_prog.common.commands;
 
 import com.mr_prog.common.collections.CollectionManager;
 import com.mr_prog.common.data.*;
+import com.mr_prog.common.exсeptions.CommandException;
+import com.mr_prog.common.exсeptions.EmptyCollectionException;
+import com.mr_prog.common.exсeptions.InvalidCommandArgumentException;
+import com.mr_prog.common.exсeptions.MissedCommandArgumentException;
 import com.mr_prog.common.io.ConsoleManager;
 import com.mr_prog.common.io.InputManager;
 import com.mr_prog.common.io.OutputManager;
@@ -12,6 +16,8 @@ import java.util.HashMap;
 
 import java.util.Map;
 import java.util.Stack;
+
+import static com.mr_prog.common.io.OutputManager.print;
 
 public class CommandManager implements CommandAble {
     private Map<String, Command> map;
@@ -31,9 +37,127 @@ public class CommandManager implements CommandAble {
 
         currentScriptFileName = "";
         map = new HashMap<String, Command>();
-        addCommand("help", (a) -> System.out.println("Pomogite"));
+        addCommand("help", (a) -> print("Pomogite"));
+        addCommand("info", (a) -> collectionManager.getInfo());
+        addCommand("show", (a) ->{
+            if(collectionManager.getCollection().isEmpty()) print("Collection is empty");
+            else print(collectionManager.serializeCollection());
+        });
+        addCommand("insert", (a) -> {
+            int id;
+            if(a==null || a.equals("")) {
+                throw new MissedCommandArgumentException();
+            }
+            id = Integer.parseInt(a);
 
+            if (collectionManager.getCollection().isEmpty()) throw new EmptyCollectionException();
+            if (!collectionManager.checkID(id)) throw new InvalidCommandArgumentException("no such id");
 
+            collectionManager.insert(id, inputManager.readCity());
+        } );
+        addCommand("update_id", (a) -> {
+            int id;
+            if(a==null || a.equals("")) {
+                throw new MissedCommandArgumentException();
+            }
+            id = Integer.parseInt(a);
+
+            if (collectionManager.getCollection().isEmpty()) throw new EmptyCollectionException();
+            if (!collectionManager.checkID(id)) throw new InvalidCommandArgumentException("no such id");
+
+            collectionManager.updateID(id, inputManager.readCity());
+        });
+        addCommand("remove_key", (a) -> {
+            int id;
+            if (a == null || a.equals("")){
+                throw new MissedCommandArgumentException();
+            }
+            try {
+                id = Integer.parseInt(a);
+            } catch (NumberFormatException e) {
+                throw new InvalidCommandArgumentException("id must be Integer");
+            }
+
+            if(collectionManager.getCollection().isEmpty()) throw new EmptyCollectionException();
+            if (!collectionManager.checkID(id)) throw new InvalidCommandArgumentException("no such id");
+
+            collectionManager.remove_key(id);
+        });
+        addCommand("clear", (a) -> collectionManager.clear());
+        addCommand("save", (a) -> {
+            if(!(a == null || a.equals(""))) fileManager.setPath(a);
+            if (collectionManager.getCollection().isEmpty()) print("collection is empty");
+            if(!fileManager.write(collectionManager.serializeCollection())) throw new CommandException("cannot save collection");
+        });
+        addCommand("execute_script", (a) ->{
+            if (a == null || a.equals("")){
+                throw new MissedCommandArgumentException();
+            }
+
+            callStack.push(currentScriptFileName);
+            CommandManager process = new CommandManager(collectionManager, inputManager, fileManager);
+            process.fileMode(a);
+            callStack.pop();
+            print("Executed success " + a);
+
+        });
+        addCommand("exit", (a) -> isRunning=false);
+        addCommand("replace_if_low", (a) -> {
+            int id;
+            if (a == null || a.equals("")){
+                throw new MissedCommandArgumentException();
+            }
+            try {
+                id = Integer.parseInt(a);
+            } catch (NumberFormatException e) {
+                throw new InvalidCommandArgumentException("id must be Integer");
+            }
+
+            if(collectionManager.getCollection().isEmpty()) throw new EmptyCollectionException();
+            if (!collectionManager.checkID(id)) throw new InvalidCommandArgumentException("no such id");
+
+            collectionManager.replace_if_lowe(id, inputManager.readCity());
+        });
+        addCommand("remove_greater_key", (a) -> {
+            int id;
+            if (a == null || a.equals("")){
+                throw new MissedCommandArgumentException();
+            }
+            try {
+                id = Integer.parseInt(a);
+            } catch (NumberFormatException e) {
+                throw new InvalidCommandArgumentException("id must be Integer");
+            }
+
+            collectionManager.remove_greater_key(id);
+        });
+        addCommand("remove_lower_key", (a) ->{
+            int id;
+            if (a == null || a.equals("")){
+                throw new MissedCommandArgumentException();
+            }
+            try {
+                id = Integer.parseInt(a);
+            } catch (NumberFormatException e) {
+                throw new InvalidCommandArgumentException("id must be Integer");
+            }
+
+            collectionManager.remove_lower_key(id);
+        });
+        addCommand("filter_starts_with_name", (a) -> {
+            if (a == null || a.equals("")){
+                throw new MissedCommandArgumentException();
+            }
+
+            collectionManager.filter_starts_with_name(a);
+
+        });
+        addCommand("print_unique_meters_above_sea_level", (a) ->{
+            collectionManager.print_unique_meters_above_sea_level();
+        });
+        addCommand("print_field_ascending_agglomeration", (a) ->{
+            collectionManager.print_field_ascending_agglomeration();
+        });
     }
 
     @Override
@@ -44,7 +168,7 @@ public class CommandManager implements CommandAble {
 
     @Override
     public void runCommand(String key, String arg) {
-
+        map.get(key).run(arg);
     }
 
     @Override
@@ -76,8 +200,4 @@ public class CommandManager implements CommandAble {
         return map;
     }
 
-    /*    public static String getHelp(){
-        return
-    }
- */
 }

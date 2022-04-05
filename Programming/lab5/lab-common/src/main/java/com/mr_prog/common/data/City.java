@@ -15,8 +15,8 @@ public class City implements Validatable {
     private final StandardOfLiving standardOfLiving; //Поле не может быть null
     private final Human governor; //Поле может быть null
 
-    City(String name, Coordinates coordinates, LocalDate localDate, Double area, Long population, Long metersAboveSeaLevel,
-         double agglomeration, Government government, StandardOfLiving standardOfLiving, Human governor) {
+    public City(String name, Coordinates coordinates, LocalDate localDate, Double area, Long population, Long metersAboveSeaLevel,
+                double agglomeration, Government government, StandardOfLiving standardOfLiving, Human governor) {
         this.name = name;
         this.coordinates = coordinates;
         this.creationDate = localDate;

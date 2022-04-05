@@ -2,6 +2,7 @@ package com.mr_prog.common.io;
 
 import com.mr_prog.common.commands.Command;
 import com.mr_prog.common.commands.CommandWrapper;
+import com.mr_prog.common.data.City;
 import com.mr_prog.common.data.Government;
 import com.mr_prog.common.data.StandardOfLiving;
 
@@ -32,6 +33,8 @@ public interface InputManager {
     public CommandWrapper readCommand();
 
     public Scanner getScanner();
+
+    public City readCity();
 
 }
 

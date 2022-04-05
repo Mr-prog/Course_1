@@ -1,10 +1,11 @@
 package com.mr_prog.common.io;
 
 import com.mr_prog.common.commands.CommandWrapper;
-import com.mr_prog.common.data.Coordinates;
-import com.mr_prog.common.data.Government;
-import com.mr_prog.common.data.StandardOfLiving;
+import com.mr_prog.common.data.*;
+import sun.util.resources.LocaleData;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.Scanner;
 
 public abstract class InputManagerScanner implements InputManager {
@@ -24,8 +25,7 @@ public abstract class InputManagerScanner implements InputManager {
     }
 
     public String readName() {
-        String name = scanner.nextLine().trim();
-        return name;
+        return scanner.nextLine().trim();
     }
 
 
@@ -48,23 +48,19 @@ public abstract class InputManagerScanner implements InputManager {
     }
 
     public Double readArea() {
-        Double area = scanner.nextDouble();
-        return area;
+        return scanner.nextDouble();
     }
 
     public Long population() {
-        Long population = scanner.nextLong();
-        return population;
+        return scanner.nextLong();
     }
 
     public Long metersAboveSeaLevel() {
-        Long meter = scanner.nextLong();
-        return meter;
+        return scanner.nextLong();
     }
 
     public double agglomeration() {
-        double agglomeration = scanner.nextDouble();
-        return agglomeration;
+        return scanner.nextDouble();
     }
 
     public Government readGovernment() {
@@ -78,8 +74,7 @@ public abstract class InputManagerScanner implements InputManager {
     }
 
     public Integer readHeight() {
-        Integer height = scanner.nextInt();
-        return height;
+        return scanner.nextInt();
     }
 
     public CommandWrapper readCommand() {
@@ -92,5 +87,22 @@ public abstract class InputManagerScanner implements InputManager {
         } else {
             return new CommandWrapper(cmd);
         }
+    }
+
+
+    public City readCity(){
+        String name = readName();
+        Coordinates coordinates = readCoordinates();
+        Double area = readArea();
+        Long population = population();
+        Long meters = metersAboveSeaLevel();
+        double agglomeration = agglomeration();
+        Government government = readGovernment();
+        StandardOfLiving standardOfLiving = readStandardOfLiving();
+        Integer height = readHeight();
+        Human governor = new Human(height);
+        LocalDate localDate = LocalDate.now();
+        return new City(name, coordinates, localDate, area, population, meters,
+                agglomeration, government, standardOfLiving, governor);
     }
 }

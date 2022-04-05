@@ -5,4 +5,8 @@ public class OutputManager {
     {
         System.out.println(msg);
     }
+
+    static public void printErr(String msg){
+        System.out.println("Error: " + msg);
+    }
 }

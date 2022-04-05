@@ -2,7 +2,7 @@ package com.mr_prog.common.data;
 
 public class Human implements Validatable{
     private Integer height; //Значение поля должно быть больше 0
-    Human (Integer height){
+    public Human(Integer height){
         this.height = height;
     }
 

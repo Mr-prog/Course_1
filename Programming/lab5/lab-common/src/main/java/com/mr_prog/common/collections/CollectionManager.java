@@ -8,7 +8,7 @@ public interface CollectionManager<K ,T> {
     public Hashtable<K, T> getCollection();
 
 
-    public void add(K ID, T element);
+    public void insert(K ID, T element);
 
     public String show();
 
@@ -18,7 +18,7 @@ public interface CollectionManager<K ,T> {
 
     public void clear();
 
-    public void replace_if_lowe();
+    public void replace_if_lowe(Integer ID, City element);
 
     public void remove_greater_key(Integer ID);
 
@@ -30,5 +30,11 @@ public interface CollectionManager<K ,T> {
 
     public void print_field_ascending_agglomeration();
 
+    public String serializeCollection();
 
+    public boolean checkID(Integer id);
+
+    public String getInfo();
+
+    public void sort();
 }
