@@ -1,7 +1,7 @@
 package com.mr_prog.common.exсeptions;
 
 public class FileDenialException extends FileException{
-    FileDenialException(String msg) {
+    public FileDenialException(String msg) {
         super(msg);
     }
 }

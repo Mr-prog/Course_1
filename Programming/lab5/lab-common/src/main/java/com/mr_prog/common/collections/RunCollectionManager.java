@@ -1,14 +1,19 @@
 package com.mr_prog.common.collections;
 
+import com.mr_prog.common.csv.CSVMaker;
+import com.mr_prog.common.csv.ReadCSV;
 import com.mr_prog.common.data.City;
-import com.sun.tools.jdeprscan.CSV;
 
+
+import java.io.FileNotFoundException;
 import java.time.LocalDate;
 import java.util.*;
 
 public class RunCollectionManager implements CollectionManager<Integer, City>{
     private Hashtable<Integer, City> collection;
     private LocalDate initDate;
+    private CSVMaker csvMaker;
+    private ReadCSV readCSV;
 
     @Override
     public Hashtable getCollection() {
@@ -96,11 +101,22 @@ public class RunCollectionManager implements CollectionManager<Integer, City>{
         System.out.println(Arrays.stream(agglomeration).sorted());
     }
 
+    public void getCollection(String csv){
+        try {
+            if(csv==null){
+                collection = new Hashtable<>();
+            } else {
+                collection = readCSV.toHashTable(csv);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public String serializeCollection() {
         if (collection == null || collection.isEmpty()) return "";
-        CSV csv = new CSV();
-        return "str";
+        return csvMaker.makeToCSV(collection);
     }
 
     @Override
@@ -118,9 +134,10 @@ public class RunCollectionManager implements CollectionManager<Integer, City>{
         return null;
     }
 
+
+
     @Override
     public void sort() {
-
         Hashtable<Integer, City> sortedCollection = collection;
         for (City city: collection.values()){
             double num = city.getAgglomeration();

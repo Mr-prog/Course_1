@@ -1,7 +1,7 @@
 package com.mr_prog.common.exсeptions;
 
 public class CannotCreateFileException extends FileException{
-    CannotCreateFileException() {
+    public CannotCreateFileException() {
         super("Cannot create file");
     }
 }

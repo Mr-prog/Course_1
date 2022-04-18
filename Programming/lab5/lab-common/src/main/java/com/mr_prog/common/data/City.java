@@ -71,8 +71,13 @@ public class City implements Validatable {
         return creationDate;
     }
 
+    public Coordinates getCoordinates() {
+        return coordinates;
+    }
 
-
+    public Human getGovernor() {
+        return governor;
+    }
 
     @Override
     public boolean validate() {

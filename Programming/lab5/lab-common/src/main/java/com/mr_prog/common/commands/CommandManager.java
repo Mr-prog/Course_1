@@ -49,11 +49,11 @@ public class CommandManager implements CommandAble {
                 throw new MissedCommandArgumentException();
             }
             id = Integer.parseInt(a);
-
-            if (collectionManager.getCollection().isEmpty()) throw new EmptyCollectionException();
+            
+            if(collectionManager.getCollection().isEmpty()) print("Collection is empty");
             if (!collectionManager.checkID(id)) throw new InvalidCommandArgumentException("no such id");
-
-            collectionManager.insert(id, inputManager.readCity());
+            City city = inputManager.readCity();
+            collectionManager.insert(id, city);
         } );
         addCommand("update_id", (a) -> {
             int id;

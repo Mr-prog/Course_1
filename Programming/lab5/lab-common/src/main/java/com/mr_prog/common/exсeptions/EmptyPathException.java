@@ -1,7 +1,7 @@
 package com.mr_prog.common.exсeptions;
 
 public class EmptyPathException extends FileException{
-    EmptyPathException() {
+    public EmptyPathException() {
         super("This path is empty");
     }
 }
