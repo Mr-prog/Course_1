@@ -34,7 +34,11 @@ public class CommandManager implements CommandAble {
 
         currentScriptFileName = "";
         map = new HashMap<String, Command>();
-        addCommand("help", (a) -> print("Pomogite"));
+        addCommand("help", (a) -> {
+            for(Command command: map.values()){
+                System.out.println(command.toString());
+            }
+        } );
         addCommand("info", (a) -> collectionManager.getInfo());
         addCommand("show", (a) ->{
             if(collectionManager.getCollection().isEmpty()) print("Collection is empty");
