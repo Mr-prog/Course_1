@@ -15,6 +15,14 @@ public class RunCollectionManager implements CollectionManager<Integer, City>{
     private CSVMaker csvMaker;
     private ReadCSV readCSV;
 
+    public RunCollectionManager(){
+            collection = new Hashtable<>();
+            initDate = LocalDate.now();
+            csvMaker = new CSVMaker();
+            readCSV = new ReadCSV();
+
+    }
+
     @Override
     public Hashtable getCollection() {
         return collection;
@@ -101,15 +109,15 @@ public class RunCollectionManager implements CollectionManager<Integer, City>{
         System.out.println(Arrays.stream(agglomeration).sorted());
     }
 
-    public void getCollection(String csv){
-        try {
-            if(csv==null){
-                collection = new Hashtable<>();
-            } else {
+    public void readCollection(String csv){
+        if(csv==null){
+            collection = new Hashtable<>();
+        } else {
+            try {
                 collection = readCSV.toHashTable(csv);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         }
     }
 

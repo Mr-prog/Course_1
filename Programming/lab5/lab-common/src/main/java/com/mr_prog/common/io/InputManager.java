@@ -5,6 +5,7 @@ import com.mr_prog.common.commands.CommandWrapper;
 import com.mr_prog.common.data.City;
 import com.mr_prog.common.data.Government;
 import com.mr_prog.common.data.StandardOfLiving;
+import com.mr_prog.common.exсeptions.InvalidEnumException;
 
 import java.util.Scanner;
 
@@ -24,9 +25,9 @@ public interface InputManager {
 
     public double agglomeration();
 
-    public Government readGovernment();
+    public Government readGovernment() throws InvalidEnumException;
 
-    public StandardOfLiving readStandardOfLiving();
+    public StandardOfLiving readStandardOfLiving() throws InvalidEnumException;
 
     public Integer readHeight();
 
@@ -34,7 +35,7 @@ public interface InputManager {
 
     public Scanner getScanner();
 
-    public City readCity();
+    public City readCity() throws InvalidEnumException;
 
 }
 

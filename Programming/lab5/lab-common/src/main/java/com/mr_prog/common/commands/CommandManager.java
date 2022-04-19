@@ -2,10 +2,7 @@ package com.mr_prog.common.commands;
 
 import com.mr_prog.common.collections.CollectionManager;
 import com.mr_prog.common.data.*;
-import com.mr_prog.common.exсeptions.CommandException;
-import com.mr_prog.common.exсeptions.EmptyCollectionException;
-import com.mr_prog.common.exсeptions.InvalidCommandArgumentException;
-import com.mr_prog.common.exсeptions.MissedCommandArgumentException;
+import com.mr_prog.common.exсeptions.*;
 import com.mr_prog.common.io.ConsoleManager;
 import com.mr_prog.common.io.InputManager;
 import com.mr_prog.common.io.OutputManager;
@@ -49,10 +46,11 @@ public class CommandManager implements CommandAble {
                 throw new MissedCommandArgumentException();
             }
             id = Integer.parseInt(a);
-            
+
             if(collectionManager.getCollection().isEmpty()) print("Collection is empty");
-            if (!collectionManager.checkID(id)) throw new InvalidCommandArgumentException("no such id");
+            if (collectionManager.checkID(id)) throw new InvalidCommandArgumentException("no such id");
             City city = inputManager.readCity();
+            city.setID(id);
             collectionManager.insert(id, city);
         } );
         addCommand("update_id", (a) -> {
@@ -64,8 +62,9 @@ public class CommandManager implements CommandAble {
 
             if (collectionManager.getCollection().isEmpty()) throw new EmptyCollectionException();
             if (!collectionManager.checkID(id)) throw new InvalidCommandArgumentException("no such id");
-
-            collectionManager.updateID(id, inputManager.readCity());
+            City city = inputManager.readCity();
+            city.setID(id);
+            collectionManager.updateID(id, city);
         });
         addCommand("remove_key", (a) -> {
             int id;
@@ -167,13 +166,17 @@ public class CommandManager implements CommandAble {
 
 
     @Override
-    public void runCommand(String key, String arg) {
+    public void runCommand(String key, String arg) throws InvalidEnumException {
         map.get(key).run(arg);
     }
 
     @Override
     public void runCommand(String key) {
-        runCommand(key, null);
+        try {
+            runCommand(key, null);
+        } catch (InvalidEnumException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -188,7 +191,11 @@ public class CommandManager implements CommandAble {
         while(isRunning){
             System.out.print("enter command (help to get command list): ");
             CommandWrapper pair = inputManager.readCommand();
-            runCommand(pair.getCommand(), pair.getArg());
+            try {
+                runCommand(pair.getCommand(), pair.getArg());
+            } catch (InvalidEnumException e) {
+                e.printStackTrace();
+            }
         }
     }
 

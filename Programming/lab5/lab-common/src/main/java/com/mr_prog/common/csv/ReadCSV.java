@@ -75,7 +75,7 @@ public class ReadCSV {
             Coordinates coordinates = new Coordinates(x, y);
             city = new City(name,coordinates,localDate,area,population,meters,
             agglomeration, government, standardOfLiving, governor);
-            index = 0;
+
             collection.put(ID, city);
         }
         try {

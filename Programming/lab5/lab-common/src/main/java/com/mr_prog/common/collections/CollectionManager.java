@@ -37,4 +37,6 @@ public interface CollectionManager<K ,T> {
     public String getInfo();
 
     public void sort();
+
+    public void readCollection(String csv);
 }

@@ -75,6 +75,10 @@ public class City implements Validatable {
         return coordinates;
     }
 
+    public void setID(Integer id){
+        this.id = id;
+    }
+
     public Human getGovernor() {
         return governor;
     }
