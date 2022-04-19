@@ -18,6 +18,8 @@ public final class Main {
         System.setOut(new PrintStream(System.out, true, "UTF-8"));
         CollectionManager<Integer, City> collectionManager = new RunCollectionManager();
         FileManager fileManager = new FileManager("D:\\ITMO\\Course_1\\Programming\\lab5\\lab-common\\src\\main\\java\\test\\test.csv");
+        System.out.println(fileManager.read());
+        collectionManager.readCollection(fileManager.read());
         InputManager consoleManager = new ConsoleManager();
         CommandManager commandManager = new CommandManager(collectionManager,consoleManager,fileManager);
         commandManager.consoleMode();

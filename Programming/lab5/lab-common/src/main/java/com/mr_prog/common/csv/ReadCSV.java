@@ -10,79 +10,38 @@ import java.util.Scanner;
 public class ReadCSV {
     private Hashtable<Integer, City> collection;
     public ReadCSV(){
-
+        collection = new Hashtable<>();
     }
 
-    public Hashtable toHashTable(String file) throws FileNotFoundException {
-        BufferedReader reader = new BufferedReader(new FileReader(file));
-        String line = null;
-        Scanner scanner = null;
+    public Hashtable toHashTable(String file) {
         int index = 0;
-
-        while (true) {
-            try {
-                if ((line = reader.readLine()) == null) break;
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        int n = file.split("[,|\n]").length / 12;
+        String[] arr = new String[file.split(",|\n").length];
+        for (String str: file.split(",|\n")) {
+            arr[index] = str;
+            index +=1;
+        }
+        for (int i = 0; i < n; i++) {
             City city;
-            int ID = 0;
-            String name = null;
-            double x = 0;
-            int y = 0;
-            double agglomeration = 0;
-            double area = 0;
-            java.time.LocalDate localDate = null;
-            Government government = null;
-            long population = 0;
-            long meters = 0;
-            StandardOfLiving standardOfLiving = null;
-            Human governor = null;
-
-
-            assert line != null;
-            scanner = new Scanner(line);
-            scanner.useDelimiter(",");
-            while (scanner.hasNext()) {
-                String data = scanner.next();
-                if (index == 0)
-                    ID = Integer.parseInt(data);
-                else if (index == 1)
-                    name = data;
-                else if (index == 2)
-                    x = Double.parseDouble(data);
-                else if (index == 3)
-                    y = Integer.parseInt(data);
-                else if (index == 4)
-                    agglomeration = Double.parseDouble(data);
-                else if (index == 5)
-                    area = Double.parseDouble(data);
-                else if (index == 6)
-                    localDate = LocalDate.parse(data);
-                else if (index == 7)
-                    government = Government.valueOf(data);
-                else if (index == 8)
-                    population = Long.parseLong(data);
-                else if (index == 9)
-                    meters = Long.parseLong(data);
-                else if (index == 10)
-                    standardOfLiving = StandardOfLiving.valueOf(data);
-                else if (index == 11)
-                    governor = new Human(Integer.parseInt(data));
-                index++;
-
-            }
+            int ID = Integer.parseInt(arr[12 * i]);
+            String name = arr[1+12*i];
+            double x = Double.parseDouble(arr[2+12*i]);
+            int y = Integer.parseInt(arr[3+12*i]);
+            double agglomeration = Double.parseDouble(arr[4+12*i]);
+            double area = Double.parseDouble(arr[5+12*i]);
+            java.time.LocalDate localDate = LocalDate.parse(arr[6+12*i]);
+            Government government = Government.valueOf(arr[7+12*i]);
+            long population = Long.parseLong(arr[8+12*i]);
+            long meters = Long.parseLong(arr[9+12*i]);
+            StandardOfLiving standardOfLiving = StandardOfLiving.valueOf(arr[10+12*i]);
+            int height = Integer.parseInt(arr[11+12*i]);
+            Human governor = new Human(height);
             Coordinates coordinates = new Coordinates(x, y);
             city = new City(name,coordinates,localDate,area,population,meters,
-            agglomeration, government, standardOfLiving, governor);
-
+                    agglomeration, government, standardOfLiving, governor);
             collection.put(ID, city);
         }
-        try {
-            reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
         return collection;
     }
 }

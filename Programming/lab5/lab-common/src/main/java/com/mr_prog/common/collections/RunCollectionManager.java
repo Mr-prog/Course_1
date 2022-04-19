@@ -113,11 +113,7 @@ public class RunCollectionManager implements CollectionManager<Integer, City>{
         if(csv==null){
             collection = new Hashtable<>();
         } else {
-            try {
-                collection = readCSV.toHashTable(csv);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
+            collection = readCSV.toHashTable(csv);
         }
     }
 
