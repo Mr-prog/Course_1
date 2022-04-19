@@ -35,10 +35,19 @@ public class CommandManager implements CommandAble {
         currentScriptFileName = "";
         map = new HashMap<String, Command>();
         addCommand("help", (a) -> {
-            for(Command command: map.values()){
-                System.out.println(command.toString());
-            }
-        } );
+            System.out.println("info");
+            System.out.println("show");
+            System.out.println("insert");
+            System.out.println("update_id");
+            System.out.println("remove_key");
+            System.out.println("execute_script");
+            System.out.println("replace_if_low");
+            System.out.println("remove_greater_key");
+            System.out.println("remove_lower_key");
+            System.out.println("filter_starts_with_name");
+            System.out.println("print_unique_meters_above_sea_level");
+            System.out.println("print_field_ascending_agglomeration");
+            });
         addCommand("info", (a) -> collectionManager.getInfo());
         addCommand("show", (a) ->{
             if(collectionManager.getCollection().isEmpty()) print("Collection is empty");
