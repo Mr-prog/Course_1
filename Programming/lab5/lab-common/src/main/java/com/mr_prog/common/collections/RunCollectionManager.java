@@ -3,6 +3,7 @@ package com.mr_prog.common.collections;
 import com.mr_prog.common.csv.CSVMaker;
 import com.mr_prog.common.csv.ReadCSV;
 import com.mr_prog.common.data.City;
+import com.mr_prog.common.exсeptions.FileException;
 
 
 import java.io.FileNotFoundException;
@@ -24,7 +25,7 @@ public class RunCollectionManager implements CollectionManager<Integer, City>{
     }
 
     @Override
-    public Hashtable getCollection() {
+    public Hashtable<Integer, City> getCollection() {
         return collection;
     }
 
@@ -91,7 +92,7 @@ public class RunCollectionManager implements CollectionManager<Integer, City>{
     @Override
     public void print_unique_meters_above_sea_level() {
         LinkedList<Long> meters = new LinkedList<>();
-        System.out.print("unique salaries:");
+        System.out.println("Unique sea level");
         for (City city: collection.values()) {
             if (!meters.contains(city.getMetersAboveSeaLevel())) {
                 System.out.println(city.getMetersAboveSeaLevel());
@@ -102,14 +103,14 @@ public class RunCollectionManager implements CollectionManager<Integer, City>{
 
     @Override
     public void print_field_ascending_agglomeration() {
-        Double [] agglomeration = new Double[collection.size()];
+        System.out.println("field ascending agglomeration :");
+        sort();
         for (City city: collection.values()){
-            Arrays.fill(agglomeration, city.getAgglomeration());
+            System.out.println(city.getAgglomeration());
         }
-        System.out.println(Arrays.stream(agglomeration).sorted());
     }
 
-    public void readCollection(String csv){
+    public void readCollection(String csv) throws FileException {
         if(csv==null){
             collection = new Hashtable<>();
         } else {
@@ -135,7 +136,7 @@ public class RunCollectionManager implements CollectionManager<Integer, City>{
 
     @Override
     public String getInfo() {
-        return null;
+        return "Hashtable size: " + Integer.toString(collection.size()) + "; initialization date: " + initDate.toString();
     }
 
 

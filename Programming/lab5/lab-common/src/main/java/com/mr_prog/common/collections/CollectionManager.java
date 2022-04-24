@@ -1,6 +1,7 @@
 package com.mr_prog.common.collections;
 
 import com.mr_prog.common.data.City;
+import com.mr_prog.common.exсeptions.FileException;
 
 import java.util.Hashtable;
 
@@ -38,5 +39,5 @@ public interface CollectionManager<K ,T> {
 
     public void sort();
 
-    public void readCollection(String csv);
+    public void readCollection(String csv) throws FileException;
 }

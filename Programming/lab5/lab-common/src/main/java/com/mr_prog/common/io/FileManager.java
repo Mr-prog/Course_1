@@ -16,6 +16,10 @@ public class FileManager implements ReaderWriter {
         this.path = path;
     }
 
+    public FileManager(){
+        path = null;
+    }
+
 
     @Override
     public void setPath(String path) {
