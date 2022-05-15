@@ -11,6 +11,11 @@ public class CSVMaker implements CSV {
 
     }
 
+    /**
+     * parse collection
+     * @param hashtable
+     * @return
+     */
     @Override
     public String makeToCSV(Hashtable<Integer, City> hashtable) {
         String file = "";

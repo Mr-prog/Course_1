@@ -8,8 +8,10 @@ import com.mr_prog.common.exсeptions.InvalidEnumException;
 import com.mr_prog.common.exсeptions.InvalidNumberException;
 
 
+import java.io.InputStream;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class InputManagerScanner implements InputManager {
@@ -28,122 +30,171 @@ public class InputManagerScanner implements InputManager {
         this.scanner = scanner;
     }
 
-    public String readName() throws EmptyStringException {
+    public String readName() throws NoSuchElementException {
         System.out.println("Set name");
+        checkCmd();
         String s = scanner.nextLine().trim();
         if (s.equals("")) {
-            throw new EmptyStringException();
+            System.out.println("Enter a value");
+            readName();
         }
+
         return s;
     }
 
 
-    public Double readCordX() throws InvalidNumberException {
+    public Double readCordX() throws InvalidNumberException, NoSuchElementException {
         System.out.println("Set x");
-        double x;
+        checkCmd();
+        double x = 0;
         try {
             x = Double.parseDouble(scanner.nextLine());
         } catch (NumberFormatException e) {
-            throw new InvalidNumberException();
+            System.out.println("Value must be a num");
+            readCordX();
         }
-        if (Double.isNaN(x)) throw new InvalidNumberException("Invalid float value");
         return x;
     }
 
-    public int readCordY() throws InvalidNumberException {
+    public int readCordY() throws NoSuchElementException {
         System.out.println("Set y");
-        int y;
+        checkCmd();
+        int y = 0;
         try {
             y = Integer.parseInt(scanner.nextLine());
         } catch (NumberFormatException e) {
-            throw new InvalidNumberException();
+            System.out.println("Value must be a num");
+            readCordY();
         }
         return y;
     }
 
-    public Coordinates readCoordinates() throws InvalidNumberException {
+    public Coordinates readCoordinates() throws InvalidNumberException, NoSuchElementException {
         int y = readCordY();
         double x = readCordX();
         return new Coordinates(x, y);
     }
 
-    public Double readArea() throws InvalidNumberException {
+    public Double readArea() throws NoSuchElementException {
         System.out.println("Set area");
-        double area;
+        checkCmd();
+        double area = 0;
         try {
             area = Double.parseDouble(scanner.nextLine());
         } catch (NumberFormatException e) {
-            throw new InvalidNumberException();
+            System.out.println("Value must be a num");
+            readArea();
         }
-        if (area <= 0 || Double.isNaN(area)) throw new InvalidNumberException("Must be greater than 0");
+        if (area <= 0 || Double.isNaN(area)) {
+            System.out.println("Value must be greater than 0");
+        }
         return area;
     }
 
-    public Long population() throws InvalidNumberException {
+    public Long population() throws InvalidNumberException, NoSuchElementException {
         System.out.println("Set population");
-        long population;
+        checkCmd();
+        long population = 0;
         try {
             population = Long.parseLong(scanner.nextLine());
         } catch (NumberFormatException e) {
-            throw new InvalidNumberException();
+            System.out.println("Value must be a num");
+            population();
         }
-        if (population <= 0) throw new InvalidNumberException("Must be greater than 0");
+        if (population <= 0) {
+            System.out.println("Value must be greater than 0");
+            population();
+        }
         return population;
     }
 
-    public Long metersAboveSeaLevel() throws InvalidNumberException {
+    public Long metersAboveSeaLevel() throws InvalidNumberException, NoSuchElementException {
         System.out.println("Set sea_level");
-        long sea;
+        checkCmd();
+        long sea = 0;
         try {
             sea = Long.parseLong(scanner.nextLine());
         } catch (NumberFormatException e) {
-            throw new InvalidNumberException();
+            System.out.println("Value must be a num");
+            metersAboveSeaLevel();
         }
         return sea;
     }
 
-    public double agglomeration() throws InvalidNumberException {
+    public double agglomeration() throws InvalidNumberException, NoSuchElementException {
         System.out.println("Set agglomeration");
-        double agg;
+        checkCmd();
+        double agg = 0;
         try {
             agg = Double.parseDouble(scanner.nextLine());
         } catch (NumberFormatException e) {
-            throw new InvalidNumberException();
+            System.out.println("Value must be a num");
+            agglomeration();
         }
         return agg;
     }
 
-    public Government readGovernment() throws InvalidEnumException {
-        System.out.println("Set Government");
+    public Government readGovernment() throws InvalidEnumException, NoSuchElementException {
+        System.out.println("Set Government \n1 - COMMUNISM \n2 - DESPOTISM \n3 - NOOCRACY");
+        checkCmd();
         try {
-            return Government.valueOf(scanner.nextLine());
+            String res = scanner.nextLine();
+            if (Integer.parseInt(res) == 1){
+                return Government.COMMUNISM;
+            } else if (Integer.parseInt(res) == 2) {
+                return Government.DESPOTISM;
+            } else if (Integer.parseInt(res) == 3) {
+                return Government.NOOCRACY; }
+            return Government.valueOf(res);
         } catch (IllegalArgumentException e) {
-            throw new InvalidEnumException();
+            System.out.println("Invalid value");
         }
+        return readGovernment();
     }
 
-    public StandardOfLiving readStandardOfLiving() throws InvalidEnumException {
-        System.out.println("Set standard_of_living");
+    public StandardOfLiving readStandardOfLiving() throws NoSuchElementException {
+        System.out.println("Set standard_of_living \n1 - VERY_HIGH \n2 - MEDIUM \n3 - ULTRA_LOW \n4 - NIGHTMARE");
+        checkCmd();
+
+
         try {
-            return StandardOfLiving.valueOf(scanner.nextLine());
+            String res = scanner.nextLine();
+            if (Integer.parseInt(res) == 1){
+                return StandardOfLiving.VERY_HIGH;
+            } else if (Integer.parseInt(res) == 2) {
+                return StandardOfLiving.MEDIUM;
+            } else if (Integer.parseInt(res) == 3) {
+                return StandardOfLiving.ULTRA_LOW;
+            } else if (Integer.parseInt(res) == 4) {
+                return StandardOfLiving.NIGHTMARE;
+            }
+
+            return StandardOfLiving.valueOf(res);
         } catch (IllegalArgumentException e) {
-            throw new InvalidEnumException();
+            System.out.println("Invalid value");
         }
+        return readStandardOfLiving();
     }
 
-    public Integer readHeight() throws InvalidNumberException {
+    public Integer readHeight() throws NoSuchElementException {
         System.out.println("Set height");
-        int h;
+        checkCmd();
+        Integer h = 0;
         try {
             h = Integer.parseInt(scanner.nextLine());
         } catch (NumberFormatException e) {
-            throw new InvalidNumberException();
+            System.out.println("Height must be number and greater than 0");
+            readHeight();
         }
-        if (h <= 0) throw new InvalidNumberException("Must be greater than 0");
+        if (h <= 0) readHeight();
+        if (h == null) {
+            readHeight();
+        }
         return h;
     }
 
-    public CommandWrapper readCommand() {
+    public CommandWrapper readCommand() throws NoSuchElementException{
+        checkCmd();
         String cmd = scanner.nextLine();
         if (cmd.contains(" ")) {
             String[] cmdArr = cmd.split(" ", 2);
@@ -156,7 +207,7 @@ public class InputManagerScanner implements InputManager {
     }
 
 
-    public City readCity() throws InvalidDataException {
+    public City readCity() throws InvalidDataException, NoSuchElementException {
 
         String name = readName();
         Coordinates coordinates = readCoordinates();
@@ -171,5 +222,13 @@ public class InputManagerScanner implements InputManager {
         LocalDate localDate = LocalDate.now();
         return new City(name, coordinates, localDate, area, population, meters,
                 agglomeration, government, standardOfLiving, governor);
+    }
+
+    public void checkCmd() {
+        if (scanner.hasNext()){
+
+        } else {
+            System.exit(0);
+        }
     }
 }

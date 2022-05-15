@@ -9,6 +9,7 @@ import com.mr_prog.common.io.*;
 import java.util.HashMap;
 
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Stack;
 
 import static com.mr_prog.common.io.OutputManager.print;
@@ -58,6 +59,7 @@ public class CommandManager implements CommandAble {
             if (a == null || a.equals("")) {
                 throw new MissedCommandArgumentException();
             }
+            if (checkInt(a)) throw  new InvalidCommandArgumentException("Invalid id");
             id = Integer.parseInt(a);
 
             if (collectionManager.getCollection().isEmpty()) print("Collection is empty");
@@ -113,7 +115,8 @@ public class CommandManager implements CommandAble {
             CommandManager process = new CommandManager(collectionManager, inputManager, fileManager);
             process.fileMode(a);
             callStack.pop();
-            print("Success " + a);
+            print("File was successfully executed");
+            collectionManager.show();
 
         });
         addCommand("exit", (a) -> isRunning = false);
@@ -333,6 +336,10 @@ public class CommandManager implements CommandAble {
         return map.containsKey(s);
     }
 
+    /**
+     * start command stream
+     * @throws InvalidDataException
+     */
     @Override
     public void consoleMode() throws InvalidDataException {
         inputManager = new ConsoleManager();
@@ -344,7 +351,11 @@ public class CommandManager implements CommandAble {
         }
     }
 
-
+    /**
+     * execute file
+     * @param path
+     * @throws InvalidDataException
+     */
     @Override
     public void fileMode(String path) throws InvalidDataException {
         currentScriptFileName = path;
@@ -354,6 +365,15 @@ public class CommandManager implements CommandAble {
         while (isRunning && inputManager.getScanner().hasNextLine()) {
             CommandWrapper pair = inputManager.readCommand();
             runCommand(pair.getCommand(), pair.getArg());
+        }
+    }
+
+    public boolean checkInt(String num){
+        try {
+            int value = Integer.parseInt(num);
+            return false;
+        } catch (NumberFormatException e) {
+            return true;
         }
     }
 

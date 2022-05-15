@@ -26,6 +26,10 @@ public class FileManager implements ReaderWriter {
         this.path = path;
     }
 
+    /**
+     * save collection
+     * @return
+     */
     @Override
     public String read() {
         StringBuilder str = new StringBuilder();
@@ -46,12 +50,19 @@ public class FileManager implements ReaderWriter {
             reader.close();
         } catch (FileException e) {
             printErr(e.getMessage());
+            System.exit(0);
         } catch (IOException e) {
             printErr("cannot access file");
+            System.exit(0);
         }
         return str.toString();
     }
 
+    /**
+     * create file
+     * @param file
+     * @throws CannotCreateFileException
+     */
     public void create(File file) throws CannotCreateFileException {
         try {
             file.createNewFile();
@@ -60,6 +71,11 @@ public class FileManager implements ReaderWriter {
         }
     }
 
+    /**
+     * save data in file
+     * @param data
+     * @return
+     */
     @Override
     public boolean write(String data) {
         boolean res = true;
@@ -72,7 +88,6 @@ public class FileManager implements ReaderWriter {
                 print("file " + path + " doesnt exist, trying to create new file");
                 create(file);
             }
-            ;
             if (!file.canWrite()) throw new FileDenialException("cannot write file");
             BufferedWriter writer = new BufferedWriter(new FileWriter(file));
             writer.write(data);

@@ -25,6 +25,7 @@ public final class Main {
             collectionManager.readCollection(fileManager.read());
         } else {
             print("Not file used by argument. Load file use load command");
+            System.exit(0);
         }
 
         InputManager consoleManager = new ConsoleManager();

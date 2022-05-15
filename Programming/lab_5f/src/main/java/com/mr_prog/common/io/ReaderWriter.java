@@ -10,6 +10,4 @@ public interface ReaderWriter {
     public String read();
 
     public boolean write(String data);
-
-    public void create(File file) throws CannotCreateFileException;
 }

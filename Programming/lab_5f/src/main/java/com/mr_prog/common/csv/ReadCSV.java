@@ -16,6 +16,11 @@ public class ReadCSV {
         collection = new Hashtable<>();
     }
 
+    /**
+     * read collection
+     * @param file
+     * @return
+     */
     public Hashtable toHashTable(String file) {
         int index = 0;
         int n = file.split("[,|\n]").length / 12;
@@ -49,7 +54,8 @@ public class ReadCSV {
                 city.setID(ID);
                 collection.put(ID, city);
             } catch (Exception e) {
-                System.out.println("Illegal data");
+                System.out.println("Illegal data in file");
+                System.exit(0);
                 return new Hashtable<Integer, City>();
             }
         }
