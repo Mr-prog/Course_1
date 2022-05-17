@@ -346,6 +346,7 @@ public class CommandManager implements CommandAble {
         isRunning = true;
         while (isRunning) {
             System.out.print("Enter command (help to get full cmd list): ");
+
             CommandWrapper pair = inputManager.readCommand();
             runCommand(pair.getCommand(), pair.getArg());
         }

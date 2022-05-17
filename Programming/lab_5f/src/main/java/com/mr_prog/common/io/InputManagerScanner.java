@@ -2,10 +2,7 @@ package com.mr_prog.common.io;
 
 import com.mr_prog.common.commands.CommandWrapper;
 import com.mr_prog.common.data.*;
-import com.mr_prog.common.exсeptions.EmptyStringException;
-import com.mr_prog.common.exсeptions.InvalidDataException;
-import com.mr_prog.common.exсeptions.InvalidEnumException;
-import com.mr_prog.common.exсeptions.InvalidNumberException;
+import com.mr_prog.common.exсeptions.*;
 
 
 import java.io.InputStream;
@@ -16,9 +13,9 @@ import java.util.Scanner;
 
 public class InputManagerScanner implements InputManager {
     private Scanner scanner;
-
-    public InputManagerScanner(Scanner scanner) {
-        this.scanner = scanner;
+    public InputManagerScanner(Scanner scan) {
+        this.scanner = scan;
+        this.scanner.useDelimiter("\n");
     }
 
     @Override
@@ -139,6 +136,7 @@ public class InputManagerScanner implements InputManager {
         checkCmd();
         try {
             String res = scanner.nextLine();
+            if(res.equals("")) readGovernment();
             if (Integer.parseInt(res) == 1){
                 return Government.COMMUNISM;
             } else if (Integer.parseInt(res) == 2) {
@@ -159,6 +157,7 @@ public class InputManagerScanner implements InputManager {
 
         try {
             String res = scanner.nextLine();
+            if(res.equals("")) readStandardOfLiving();
             if (Integer.parseInt(res) == 1){
                 return StandardOfLiving.VERY_HIGH;
             } else if (Integer.parseInt(res) == 2) {
@@ -182,6 +181,7 @@ public class InputManagerScanner implements InputManager {
         Integer h = 0;
         try {
             h = Integer.parseInt(scanner.nextLine());
+            if(h.equals("")) readHeight();
         } catch (NumberFormatException e) {
             System.out.println("Height must be number and greater than 0");
             readHeight();
@@ -195,7 +195,9 @@ public class InputManagerScanner implements InputManager {
 
     public CommandWrapper readCommand() throws NoSuchElementException{
         checkCmd();
+
         String cmd = scanner.nextLine();
+        if(cmd.equals("")) readCommand();
         if (cmd.contains(" ")) {
             String[] cmdArr = cmd.split(" ", 2);
             cmd = cmdArr[0];
