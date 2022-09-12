@@ -1,7 +1,7 @@
 package commands;
 
 import exceptions.InvalidArgumentException;
-import exeptions.*;
+
 import util.Request;
 
 public abstract class CommandAble {

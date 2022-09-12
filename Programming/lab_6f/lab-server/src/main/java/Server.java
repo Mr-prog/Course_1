@@ -17,9 +17,8 @@ public class Server {
 
         InternetManager net = null;
         try {
-            net = new InternetManager(6754);
+            net = new InternetManager(6753);
         } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
-            System.out.println("ddd");
             System.exit(1);
         }
         net.init();
@@ -28,11 +27,10 @@ public class Server {
         CollectionManager collectionManager = null;
 
         try {
-            fileManager = new FileManager("1.csv");
+            fileManager = new FileManager("D:\\ITMO\\Course_1\\Programming\\lab_6f\\lab-server\\src\\main\\java\\1.csv");
             collectionManager = new CollectionManager(fileManager);
             commandManager = new CommandManager(collectionManager);
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("dd");
             System.exit(1);
         }
 

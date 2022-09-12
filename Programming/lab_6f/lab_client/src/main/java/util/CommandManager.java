@@ -16,14 +16,13 @@ public class CommandManager {
         commands.put(Insert.name, new Insert());
         commands.put(UpdateId.name, new UpdateId());
         commands.put(RemoveKey.name, new RemoveKey());
-        commands.put(ExecuteScript.name, new ExecuteScript(this));
+//        commands.put(ExecuteScript.name, new ExecuteScript(this));
         commands.put(Exit.name, new Exit());
         commands.put(FieldAscending.name, new FieldAscending());
         commands.put(FilterNames.name, new FilterNames());
         commands.put(RemoveGreaterKey.name, new RemoveGreaterKey());
         commands.put(RemoveLowerKey.name, new RemoveLowerKey());
         commands.put(ReplaceIfLow.name, new ReplaceIfLow());
-        commands.put(UniqueMeters.name, new UniqueMeters());
         commands.put(Help.name, new Help(commands));
 
     }

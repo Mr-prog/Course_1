@@ -15,7 +15,7 @@ public class Client {
         IOManager io = new IOManager();
         InternetManager net = null;
         try {
-            net = new InternetManager(InetAddress.getLoopbackAddress(), Integer.parseInt(args[0]));
+            net = new InternetManager(InetAddress.getLoopbackAddress(), 6753);
         } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
             System.out.println("Неверно указан порт");
             System.exit(1);

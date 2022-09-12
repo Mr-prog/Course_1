@@ -303,8 +303,9 @@ public class City implements Serializable {
 
     @Override
     public String toString() {
-        return "Город" + id + name + coordinates + creationDate + area + population +
-                metersAboveSeaLevel + agglomeration + government + standardOfLiving + governor;
+        return "Город " + id + " " + name + " " + coordinates + "\ndata: " + creationDate
+                + "\n" + area + " " + population + " " +
+                metersAboveSeaLevel + " " + agglomeration + " " + government + " " + standardOfLiving + governor;
     }
 
 }
