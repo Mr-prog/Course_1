@@ -72,7 +72,7 @@ public class CommandManager implements CommandAble {
             int id;
             if (a == null || a.equals("")) {
                 throw new MissedCommandArgumentException();
-            }
+            }   
             id = Integer.parseInt(a);
 
             if (collectionManager.getCollection().isEmpty()) throw new EmptyCollectionException();

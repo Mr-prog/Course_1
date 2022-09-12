@@ -6,29 +6,33 @@ import com.mr_prog.common.data.City;
 import com.mr_prog.common.exсeptions.FileException;
 
 
-import java.io.FileNotFoundException;
 import java.time.LocalDate;
 import java.util.*;
 
 public class RunCollectionManager implements CollectionManager<Integer, City>{
-    private Hashtable<Integer, City> collection;
+    private TreeMap<Integer, City> collection;
     private LocalDate initDate;
     private CSVMaker csvMaker;
     private ReadCSV readCSV;
 
     public RunCollectionManager(){
-            collection = new Hashtable<>();
+            collection = new TreeMap<>();
             initDate = LocalDate.now();
             csvMaker = new CSVMaker();
             readCSV = new ReadCSV();
 
     }
 
+//    @Override
+//    public TreeMap<Integer, City> getCollection() {
+//        return collection;
+//    }
+
+
     @Override
     public Hashtable<Integer, City> getCollection() {
-        return collection;
+        return null;
     }
-
 
     /**
      * adds new element
@@ -152,9 +156,9 @@ public class RunCollectionManager implements CollectionManager<Integer, City>{
 
     public void readCollection(String csv) throws FileException {
         if(csv==null){
-            collection = new Hashtable<>();
+            collection = new TreeMap<>();
         } else {
-            collection = readCSV.toHashTable(csv);
+            collection = readCSV.toTreeMap(csv);
         }
     }
 
@@ -187,7 +191,7 @@ public class RunCollectionManager implements CollectionManager<Integer, City>{
 
     @Override
     public void sort() {
-        Hashtable<Integer, City> sortedCollection = collection;
+        TreeMap<Integer, City> sortedCollection = collection;
         for (City city: collection.values()){
             double num = city.getAgglomeration();
             for (City city1: collection.values()){
