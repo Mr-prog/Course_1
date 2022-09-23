@@ -30,12 +30,15 @@ public class FileManager {
         TreeMap<String, City> tmpMovies = new TreeMap<>();
         Path path = Paths.get(src);
         if (!Files.isRegularFile(path)) {
+            System.out.println("File not Regular");
             System.exit(1);
         }
         if (!Files.isWritable(path)) {
+            System.out.println("File not writable");
             System.exit(1);
         }
         if (!Files.isReadable(path)) {
+            System.out.println("File not readable");
             System.exit(1);
         }
         long ind = 0;
@@ -54,7 +57,8 @@ public class FileManager {
                     ind += 1;
                 }
             }
-        } catch (CsvValidationException | IOException e) {
+        } catch (IOException | CsvValidationException e) {
+            System.out.println("Неверный формат файла");
             System.exit(1);
         }
 

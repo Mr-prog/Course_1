@@ -1,7 +1,8 @@
 package commands;
 
-import com.sun.javaws.exceptions.InvalidArgumentException;
+
 import content.City;
+import exeptions.InvalidArgumentException;
 import util.CollectionManager;
 
 public class Insert implements CommandAble {
@@ -16,10 +17,10 @@ public class Insert implements CommandAble {
     public String run(String arg, City obj) throws InvalidArgumentException {
         System.out.println("insert" + arg + obj);
         if (arg == null) {
-            throw new InvalidArgumentException(new String[]{"Эта команда требует аргумент: ключ элемента коллекции"});
+            throw new InvalidArgumentException("Эта команда требует аргумент: ключ элемента коллекции");
         }
         if (collection.contains(arg)) {
-            throw new InvalidArgumentException(new String[]{"Элемент с таким ключом уже существует"});
+            throw new InvalidArgumentException("Элемент с таким ключом уже существует");
         }
         if (obj == null) {
             System.out.println("obj == null");

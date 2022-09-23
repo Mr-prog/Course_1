@@ -16,7 +16,7 @@ public class CommandManager {
         commands.put(Insert.name, new Insert());
         commands.put(UpdateId.name, new UpdateId());
         commands.put(RemoveKey.name, new RemoveKey());
-//        commands.put(ExecuteScript.name, new ExecuteScript(this));
+        commands.put(ExecuteScript.name, new ExecuteScript(this));
         commands.put(Exit.name, new Exit());
         commands.put(FieldAscending.name, new FieldAscending());
         commands.put(FilterNames.name, new FilterNames());
@@ -33,11 +33,11 @@ public class CommandManager {
             return commands.get(args[0]).getRequest(args.length > 1 ? args[1] : null);
         } catch (NullPointerException e) {
             if (!args[0].isEmpty()) {
-                System.out.println("\u001B[31m" + "Нет такой команды. Вызовите help для справки по командам." + "\u001B[0m");
+                System.out.println("Нет такой команды. Вызовите help для справки по командам.");
             }
             return null;
         } catch (InvalidArgumentException e) {
-            System.out.println("\u001B[31m" + e.getMessage() + "\u001B[0m");
+            System.out.println(e.getMessage());
             return null;
         }
     }

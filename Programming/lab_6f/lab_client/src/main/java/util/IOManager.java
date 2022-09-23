@@ -34,7 +34,7 @@ public class IOManager {
                 return scanner.nextLine();
             }
         } catch (NoSuchElementException e) {
-            System.out.println("Нажат Ctrl+D - выхожу из программы");
+            System.out.println("Ctrl+D - выход из программы");
             System.exit(0);
 
         } catch (IOException e) {

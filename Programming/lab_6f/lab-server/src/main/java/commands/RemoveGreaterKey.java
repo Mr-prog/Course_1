@@ -1,7 +1,8 @@
 package commands;
 
-import com.sun.javaws.exceptions.InvalidArgumentException;
+
 import content.City;
+import exeptions.InvalidArgumentException;
 import util.CollectionManager;
 
 public class RemoveGreaterKey implements CommandAble{
@@ -17,7 +18,7 @@ public class RemoveGreaterKey implements CommandAble{
     @Override
     public String run(String arg, City obj) throws InvalidArgumentException {
         if (arg == null){
-            throw new InvalidArgumentException(new String[]{"Эта команда требует аргумент: ключ элемента коллекции"});
+            throw new InvalidArgumentException("Эта команда требует аргумент: ключ элемента коллекции");
         }
 
         return "Удалено элементов: " + collection.removeGreaterKey(arg);

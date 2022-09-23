@@ -15,13 +15,13 @@ public class Client {
         IOManager io = new IOManager();
         InternetManager net = null;
         try {
-            net = new InternetManager(InetAddress.getLoopbackAddress(), 6753);
+            net = new InternetManager(InetAddress.getLoopbackAddress(), Integer.parseInt(args[0]));
         } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
             System.out.println("Неверно указан порт");
             System.exit(1);
         }
         if (!net.connect()) {
-            System.out.println("\u001B[31m" + "Сервер не отвечает" + "\u001B[0m");
+            System.out.println("Сервер не отвечает");
             while (!net.connect()) {
             }
         }
@@ -41,13 +41,13 @@ public class Client {
                     break;
                 }
             } catch (NoSuchElementException e) {
-                System.out.println("\u001B[31m" + "Нажат Ctrl+D - выхожу из программы" + "\u001B[0m");
+                System.out.println("Ctrl+D - выход из программы");
                 System.exit(0);
             } catch (NetException e) {
-                System.out.println("\u001B[31m" + e.getMessage() + "\u001B[0m");
+                System.out.println(e.getMessage());
                 resend(res, net);
             } catch (NullPointerException e) {
-                System.out.println("\u001B[31mОшибка отправки\u001B[0m");
+                System.out.println("Ошибка отправки");
                 resend(res, net);
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
@@ -64,7 +64,7 @@ public class Client {
             System.out.println("Повторная отправка");
             net.exchange(res);
         } catch (NetException | ClassNotFoundException | IOException ex) {
-            System.out.println("\u001B[31m" + "Ошибка при повторной отправке" + "\u001B[0m");
+            System.out.println("Ошибка при повторной отправке");
         }
 
     }

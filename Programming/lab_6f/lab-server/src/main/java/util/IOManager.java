@@ -35,7 +35,7 @@ public class IOManager {
             line = file.readLine();
             System.out.println("line"+line);
         } catch (NoSuchElementException e) {
-            System.out.println("Нажат Ctrl+D - выхожу из программы");
+            System.out.println("Ctrl+D - выход из программы");
             System.exit(0);
             return null;
         } catch (IOException e) {

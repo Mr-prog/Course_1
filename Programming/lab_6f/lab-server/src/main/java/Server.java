@@ -17,8 +17,9 @@ public class Server {
 
         InternetManager net = null;
         try {
-            net = new InternetManager(6753);
+            net = new InternetManager(Integer.parseInt(args[1]));
         } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
+            System.out.println("Неверно указан порт");
             System.exit(1);
         }
         net.init();
@@ -27,10 +28,11 @@ public class Server {
         CollectionManager collectionManager = null;
 
         try {
-            fileManager = new FileManager("D:\\ITMO\\Course_1\\Programming\\lab_6f\\lab-server\\src\\main\\java\\1.csv");
+            fileManager = new FileManager(args[0]); //args[0]
             collectionManager = new CollectionManager(fileManager);
             commandManager = new CommandManager(collectionManager);
         } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Файл не найден");
             System.exit(1);
         }
 

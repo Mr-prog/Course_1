@@ -1,7 +1,8 @@
 package commands;
 
-import com.sun.javaws.exceptions.InvalidArgumentException;
+
 import content.City;
+import exeptions.InvalidArgumentException;
 import util.CollectionManager;
 
 public class UpdateId implements CommandAble {
@@ -19,10 +20,10 @@ public class UpdateId implements CommandAble {
         try {
             id = Integer.parseInt(arg);
         } catch (NumberFormatException e) {
-            throw new InvalidArgumentException(new String[]{"Эта команда требует аргумент: id"});
+            throw new InvalidArgumentException("Эта команда требует аргумент: id");
         }
         if (!collection.containsID(id)) {
-            throw new InvalidArgumentException(new String[]{"Элемента с таким id нет"});
+            throw new InvalidArgumentException("Элемента с таким id нет");
         }
 
         collection.update(id, obj);

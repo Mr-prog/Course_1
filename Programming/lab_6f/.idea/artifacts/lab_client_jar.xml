@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="lab-client:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/lab_client_jar</output-path>
+    <root id="archive" name="lab-client.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/lab_client/src/main/java/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="lab-client" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-lang3-3.12.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

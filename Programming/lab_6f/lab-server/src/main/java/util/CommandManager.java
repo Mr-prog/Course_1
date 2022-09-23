@@ -1,7 +1,8 @@
 package util;
 
-import com.sun.javaws.exceptions.InvalidArgumentException;
+
 import commands.*;
+import exeptions.InvalidArgumentException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,6 +14,7 @@ public class CommandManager {
 
     public CommandManager(CollectionManager collectionManager) {
         commands.put("info", new Info(collectionManager));
+//        commands.put("execute_script", new ExecuteScript(this));
         commands.put("show", new Show(collectionManager));
         commands.put("insert", new Insert(collectionManager));
         commands.put("update_id", new UpdateId(collectionManager));
@@ -35,7 +37,7 @@ public class CommandManager {
             return null;
         } catch (InvalidArgumentException e) {
             System.out.println(e.getMessage());
-            return "\u001B[31m" + e.getMessage() + "\u001B[0m";
+            return e.getMessage();
         }
     }
 
@@ -45,7 +47,7 @@ public class CommandManager {
         } catch (NullPointerException e) {
             return null;
         } catch (InvalidArgumentException e) {
-            return "\u001B[31m" + e.getMessage() + "\u001B[0m";
+            return e.getMessage();
         }
     }
 }

@@ -34,20 +34,16 @@ public class InternetManager {
             sock = new Socket(host, port);
             os = sock.getOutputStream();
             is = sock.getInputStream();
-            System.out.println("\u001B[32m" + "Connected" + "\u001B[0m");
+            System.out.println("Connected");
             return true;
         } catch (ConnectException e) {
-//            System.out.println("\u001B[31m" + "Сервер не отвечает" + "\u001B[0m");
             return false;
         } catch (IllegalArgumentException e) {
-            System.out.println("\u001B[31m" + "Неверно указан порт" + "\u001B[0m");
+            System.out.println("Неверно указан порт");
             System.exit(1);
             return false;
         } catch (IOException | NullPointerException e) {
-//            e.printStackTrace();
-//            System.out.println("\u001B[31m" + "Сервер наелся запросов и спит" + "\u001B[0m");
             return false;
-//            System.exit(1);
         }
     }
 

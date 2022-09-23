@@ -278,11 +278,11 @@ public class City implements Serializable {
         Coordinates coordinates = new Coordinates(x, y);
         Government government = Government.parse(data[6]);
         Integer height = Human.parseHeight(data[7]);
-        StandardOfLiving standardOfLiving = StandardOfLiving.parse(data[7]);
-        double area = parseArea(data[8]);
-        long population = parsePopulation(data[9]);
-        long meters = parseMeters(data[10]);
-        double agglomeration = parseAgglomeration(data[11]);
+        StandardOfLiving standardOfLiving = StandardOfLiving.parse(data[8]);
+        double area = parseArea(data[9]);
+        long population = parsePopulation(data[10]);
+        long meters = parseMeters(data[11]);
+        double agglomeration = parseAgglomeration(data[12]);
         Human governor = new Human(height);
 
         City city = new City(name, coordinates, date, area, population, meters,
@@ -302,8 +302,9 @@ public class City implements Serializable {
 
     @Override
     public String toString() {
-        return "Город" + id + name + coordinates + creationDate + area + population +
-                metersAboveSeaLevel + agglomeration + government + standardOfLiving + governor;
+        return "Город c id " + id + ", названием " + name + " " + coordinates + "\ndata: " + creationDate
+                + "\n" + area + " " + population + " " +
+                metersAboveSeaLevel + " " + agglomeration + " " + government + " " + standardOfLiving + governor;
     }
 
 }
