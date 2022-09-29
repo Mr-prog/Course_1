@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e038be85-7105-426c-8b55-a5cc7e1ed197" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/commands/Clear.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/commands/Commands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/commands/Execute_script.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/commands/Exit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/commands/Filter_starts_with_name.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/commands/Help.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/commands/Info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/commands/Insert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/commands/Print_field_agglomeration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/commands/Print_unique_meters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/commands/Remove_greater_key.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/commands/Remove_key.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/commands/Remove_lower_key.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/commands/Replace_if_low.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/commands/Show.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/commands/Update_id.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/data/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/data/CollectionAble.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/data/Coordinates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/data/Government.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/data/Human.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/data/StandardOfLiving.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/data/Validatable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/util/CommandAble.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/client/util/CommandManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/server/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/server/data/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/server/data/CollectionAble.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/server/data/Coordinates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/server/data/Government.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/server/data/Human.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/server/data/StandardOfLiving.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/server/data/Validatable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/server/util/CollectionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6/src/main/java/server/util/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab_5f/src/main/java/com/mr_prog/common/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_5f/src/main/java/com/mr_prog/common/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab_5f/target/classes/com/mr_prog/common/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_5f/target/classes/com/mr_prog/common/Main.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2AQZiuP9sD5Yvpe8PIS7veIIWxY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="untitled" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e038be85-7105-426c-8b55-a5cc7e1ed197" name="Changes" comment="" />
+      <created>1654943905335</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654943905335</updated>
+      <workItem from="1654943906673" duration="1011000" />
+      <workItem from="1657128905710" duration="24000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

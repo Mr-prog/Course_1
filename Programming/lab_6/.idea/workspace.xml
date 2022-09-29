@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bf34a426-747a-474c-af5f-1bc5aa2f488d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/commands/Clear.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/commands/Commands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/commands/Execute_script.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/commands/Exit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/commands/Filter_starts_with_name.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/commands/Help.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/commands/Info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/commands/Insert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/commands/Print_field_agglomeration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/commands/Print_unique_meters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/commands/Remove_greater_key.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/commands/Remove_key.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/commands/Remove_lower_key.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/commands/Replace_if_low.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/commands/Show.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/commands/Update_id.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/data/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/data/CollectionAble.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/data/Coordinates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/data/Government.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/data/Human.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/data/StandardOfLiving.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/data/Validatable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/util/CommandAble.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/util/CommandManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/data/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/data/CollectionAble.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/data/Coordinates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/data/Government.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/data/Human.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/data/StandardOfLiving.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/data/Validatable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/util/CollectionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/util/FileManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6f/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6f/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6f/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6f/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6f/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6f/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6f/lab-common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6f/lab-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6f/lab_client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab_6f/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab_5f/src/main/java/com/mr_prog/common/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_5f/src/main/java/com/mr_prog/common/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab_5f/src/main/java/com/mr_prog/common/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_5f/src/main/java/com/mr_prog/common/test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab_5f/target/classes/com/mr_prog/common/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_5f/target/classes/com/mr_prog/common/Main.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="29scRmxV9rPw89Xhj4WrNBuFjJO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/server" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ITMO\Course_1\Programming\lab_6\src\main\java\server" />
+      <recent name="D:\ITMO\Course_1\Programming\lab_6\src\main\java\client" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf34a426-747a-474c-af5f-1bc5aa2f488d" name="Changes" comment="" />
+      <created>1653905231945</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653905231945</updated>
+      <workItem from="1653905233233" duration="640000" />
+      <workItem from="1653906192434" duration="7443000" />
+      <workItem from="1653930842155" duration="1534000" />
+      <workItem from="1653932395553" duration="2000" />
+      <workItem from="1653932401390" duration="2078000" />
+      <workItem from="1654943874902" duration="29000" />
+      <workItem from="1657346196943" duration="717000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
