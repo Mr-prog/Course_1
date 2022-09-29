@@ -30,7 +30,6 @@ com\mr_prog\common\commands\CommandManager.class
 com\mr_prog\common\exсeptions\IllegalCommandException.class
 com\mr_prog\common\data\Government.class
 com\mr_prog\common\csv\CSV.class
-com\mr_prog\common\util\DateConverter.class
 com\mr_prog\common\exсeptions\InvalidCommandArgumentException.class
 com\mr_prog\common\io\FileManager.class
 com\mr_prog\common\commands\CommandAble.class

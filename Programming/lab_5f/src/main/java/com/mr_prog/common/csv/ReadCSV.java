@@ -8,15 +8,21 @@ import java.io.*;
 import java.time.LocalDate;
 import java.util.Hashtable;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 public class ReadCSV {
-    private Hashtable<Integer, City> collection;
+    private TreeMap<Integer, City> collection;
 
     public ReadCSV() {
-        collection = new Hashtable<>();
+        collection = new TreeMap<Integer, City>();
     }
 
-    public Hashtable toHashTable(String file) {
+    /**
+     * read collection
+     * @param file
+     * @return
+     */
+    public TreeMap toTreeMap(String file) {
         int index = 0;
         int n = file.split("[,|\n]").length / 12;
         String[] arr = new String[file.split(",|\n").length];
@@ -49,8 +55,9 @@ public class ReadCSV {
                 city.setID(ID);
                 collection.put(ID, city);
             } catch (Exception e) {
-                System.out.println("Illegal data");
-                return new Hashtable<Integer, City>();
+                System.out.println("Illegal data in file");
+                System.exit(0);
+                return new TreeMap();
             }
         }
 

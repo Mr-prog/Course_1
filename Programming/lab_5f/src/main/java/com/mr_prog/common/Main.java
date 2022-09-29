@@ -20,11 +20,14 @@ public final class Main {
         System.setOut(new PrintStream(System.out, true, "UTF-8"));
         CollectionManager<Integer, City> collectionManager = new RunCollectionManager();
         FileManager fileManager = new FileManager();
+
         if (args.length != 0) {
             fileManager.setPath(args[0]);
             collectionManager.readCollection(fileManager.read());
+            System.out.println(fileManager.read());
         } else {
             print("Not file used by argument. Load file use load command");
+            System.exit(0);
         }
 
         InputManager consoleManager = new ConsoleManager();

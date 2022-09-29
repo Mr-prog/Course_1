@@ -2,7 +2,7 @@ package com.mr_prog.common.csv;
 
 import com.mr_prog.common.data.City;
 
-import java.util.Hashtable;
+import java.util.TreeMap;
 
 public class CSVMaker implements CSV {
     private final String SPLITTER = ",";
@@ -11,8 +11,13 @@ public class CSVMaker implements CSV {
 
     }
 
+    /**
+     * parse collection
+     * @param hashtable
+     * @return
+     */
     @Override
-    public String makeToCSV(Hashtable<Integer, City> hashtable) {
+    public String makeToCSV(TreeMap<Integer, City> hashtable) {
         String file = "";
         for (City city : hashtable.values()) {
             file += city.getId() + SPLITTER + city.getName() + SPLITTER + city.getCoordinates().getX()
