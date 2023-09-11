@@ -17,7 +17,8 @@ public class Server {
 
         InternetManager net = null;
         try {
-            net = new InternetManager(Integer.parseInt(args[1]));
+//            net = new InternetManager(Integer.parseInt(args[1]));
+            net = new InternetManager(998);
         } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
             System.out.println("Неверно указан порт");
             System.exit(1);

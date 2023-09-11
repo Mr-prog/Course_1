@@ -9,7 +9,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fddd2507-0b5a-48c5-a5dc-9144d010a1f0" name="Changes" comment="" />
+    <list default="true" id="fddd2507-0b5a-48c5-a5dc-9144d010a1f0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../lab7/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../lab7/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab7/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab7/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/Clear.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/CommandAble.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/ExecuteScript.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/Exit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/FieldAscending.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/FilterNames.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/Help.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/Info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/Insert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/RemoveGreaterKey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/RemoveKey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/RemoveLowerKey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/ReplaceIfLow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/Show.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/UpdateId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/content/City.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/content/Coordinates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/content/Government.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/content/Human.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/content/StandardOfLiving.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/exceptions/InvalidArgumentException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/exceptions/InvalidParameterException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/exceptions/NetException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/util/Auth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/util/CommandManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/util/IOManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/util/InternetManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/util/Request.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/util/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab7/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab7/server/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/Server.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,6 +122,7 @@
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
       <module name="lab-client" />
+      <option name="PROGRAM_PARAMETERS" value="998" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -89,6 +130,7 @@
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server" />
       <module name="lab-server" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;D:\ITMO\Course_1\Programming\lab_6f\lab-server\src\main\java\1.csv&quot;" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -125,6 +167,10 @@
       <workItem from="1663934800368" duration="125000" />
       <workItem from="1663935276973" duration="5604000" />
       <workItem from="1663941319263" duration="7938000" />
+      <workItem from="1664501224695" duration="46000" />
+      <workItem from="1665243002930" duration="860000" />
+      <workItem from="1665243885961" duration="10000" />
+      <workItem from="1694461147164" duration="3222000" />
     </task>
     <servers />
   </component>
