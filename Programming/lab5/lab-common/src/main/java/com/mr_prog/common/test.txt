@@ -1,3 +1,0 @@
-remove_lower_key 3
-save
-show
