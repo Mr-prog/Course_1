@@ -3,7 +3,10 @@ package commands;
 
 import content.City;
 import exeptions.InvalidArgumentException;
+import exeptions.UserNotFoundException;
+import util.Auth;
 import util.CollectionManager;
+import util.Request;
 
 public class UpdateId implements CommandAble {
     CollectionManager collection;
@@ -15,10 +18,16 @@ public class UpdateId implements CommandAble {
     }
 
     @Override
-    public String run(String arg, City obj) throws InvalidArgumentException {
+    public String run(Request req) throws InvalidArgumentException {
+        try {
+            if (!Auth.checkRequest(req)) return "Ошибка авторизации: неверный пароль";
+        } catch (UserNotFoundException e) {
+            return "Ошибка авторизации: юзер не найден";
+        }
+
         Integer id;
         try {
-            id = Integer.parseInt(arg);
+            id = Integer.parseInt(req.getArg());
         } catch (NumberFormatException e) {
             throw new InvalidArgumentException("Эта команда требует аргумент: id");
         }
@@ -26,8 +35,8 @@ public class UpdateId implements CommandAble {
             throw new InvalidArgumentException("Элемента с таким id нет");
         }
 
-        collection.update(id, obj);
-        return "Фильм успешно отредактирован";
+//        collection.update(id, req.getObj());
+        return "Город успешно отредактирован";
     }
 
     public String getDescription() {

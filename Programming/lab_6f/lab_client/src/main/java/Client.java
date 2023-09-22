@@ -26,6 +26,7 @@ public class Client {
             }
         }
 
+        auth(net);
 
         while (true) {
             Request res = null;
@@ -65,7 +66,24 @@ public class Client {
             net.exchange(res);
         } catch (NetException | ClassNotFoundException | IOException ex) {
             System.out.println("Ошибка при повторной отправке");
-        }
+        }}
 
-    }
+        private static void auth (InternetManager net){
+            IOManager.out("Регистрируете(r) или Логинитесь(l)? ");
+            switch (IOManager.nextLine().trim().toLowerCase()) {
+                case "r":
+                    if (net.register()) {
+                        IOManager.green("Зарегистрирован");
+                    }
+                    break;
+                case "l":
+                    if (net.login()) {
+                        IOManager.green("Авторизовано");
+                    }
+                    break;
+                default:
+                    IOManager.error("Введите r или l");
+                    auth(net);
+            }
+        }
 }

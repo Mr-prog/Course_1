@@ -3,7 +3,10 @@ package commands;
 
 import content.City;
 import exeptions.InvalidArgumentException;
+import exeptions.UserNotFoundException;
+import util.Auth;
 import util.CollectionManager;
+import util.Request;
 
 import java.util.Map;
 
@@ -20,7 +23,12 @@ public class Help implements CommandAble {
 
 
     @Override
-    public String run(String arg, City obj) throws InvalidArgumentException {
+    public String run(Request req) throws InvalidArgumentException {
+        try {
+            if (!Auth.checkRequest(req)) return "Ошибка авторизации: неверный пароль";
+        } catch (UserNotFoundException e) {
+            return "Ошибка авторизации: юзер не найден";
+        }
         String resp = "";
         for (String key : commands.keySet()) {
             resp += key + ": " + commands.get(key).getDescription() + "\n";

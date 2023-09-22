@@ -17,6 +17,7 @@ public class InternetManager {
     public OutputStream os;
     public InputStream is;
 
+
     public static InternetManager net;
 
     public InternetManager(InetAddress host, int port) {
@@ -68,7 +69,7 @@ public class InternetManager {
             ObjectInputStream ois = new ObjectInputStream(bais);
             return (Response) ois.readObject();
         } catch (java.io.IOException e) {
-            System.out.println("Ошибка чтения");
+            IOManager.error("Ошибка чтения");
         }
         return null;
     }
@@ -81,8 +82,100 @@ public class InternetManager {
     }
 
     public String exchange(Request res) throws NetException, IOException, ClassNotFoundException {
-        this.send(res);
-        String msg = ((Response) this.read()).getMsg();
+        send(res);
+        String msg = ((Response) read()).getMsg();
         return msg;
+    }
+
+    public boolean login() {
+        IOManager.out("Введите логин: ");
+        String login = IOManager.nextLine().trim();
+
+        try {
+            if (net.exchange(new Request("check_user", login)).equals("true")) {
+                return checkPwd(login);
+            } else {
+                IOManager.error("Нет такого юзера");
+                login();
+            }
+
+        } catch (NetException | IOException | ClassNotFoundException | NullPointerException e) {
+        }
+        return false;
+    }
+
+    public boolean checkPwd(String login) throws NetException, IOException, ClassNotFoundException {
+        String pwd = "";
+        IOManager.out("Введите пароль: ");
+        pwd = IOManager.nextLine().trim();
+
+        Auth.setLogin(login);
+        Auth.setPwd(pwd);
+
+        if (net.exchange(new Request("login")).equals("true")) {
+            return true;
+        } else {
+            IOManager.error("Неверный пароль");
+            checkPwd(login);
+        }
+        return false;
+    }
+
+    private String getPwd() {
+        IOManager.out("Введите пароль: ");
+        String pwd = IOManager.nextLine().trim();
+        if (pwd.length() >= 4) {
+            return pwd;
+        } else {
+            IOManager.error("В пароле должно быть от 4 символов");
+            getPwd();
+        }
+        return null;
+    }
+
+
+    public boolean addUser(String login, String pwd) {
+        Auth.setLogin(login);
+        Auth.setPwd(pwd);
+        Request req = new Request("register");
+        try {
+            return net.exchange(req).equals("true");
+        } catch (NetException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean isUserExist(String login) {
+        try {
+            return net.exchange(new Request("check_user", login)).equals("true");
+        } catch (NetException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+
+    public boolean register() {
+        IOManager.out("Введите логин: ");
+        String login = IOManager.nextLine().trim();
+        String pwd;
+
+        if (!isUserExist(login)) {
+            pwd = getPwd();
+            return addUser(login, pwd);
+        } else {
+            IOManager.error("Уже есть такой юзер");
+            register();
+        }
+        return false;
     }
 }

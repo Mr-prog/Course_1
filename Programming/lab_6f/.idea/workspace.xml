@@ -10,45 +10,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fddd2507-0b5a-48c5-a5dc-9144d010a1f0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../lab7/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../lab7/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab7/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab7/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/Clear.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/CommandAble.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/ExecuteScript.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/Exit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/FieldAscending.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/FilterNames.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/Help.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/Info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/Insert.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/RemoveGreaterKey.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/RemoveKey.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/RemoveLowerKey.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/ReplaceIfLow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/Show.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/commands/UpdateId.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/content/City.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/content/Coordinates.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/content/Government.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/content/Human.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/content/StandardOfLiving.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/exceptions/InvalidArgumentException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/exceptions/InvalidParameterException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/exceptions/NetException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/util/Auth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/util/CommandManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/util/IOManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/util/InternetManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/util/Request.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/client/src/main/java/util/Response.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab7/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab7/server/pom.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/commands/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/commands/Clear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/commands/CommandAble.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/commands/CommandAble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/commands/Exit.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/commands/Exit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/commands/FieldAscending.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/commands/FieldAscending.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/commands/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/commands/Help.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/commands/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/commands/Info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/commands/Insert.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/commands/Insert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/commands/RemoveGreaterKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/commands/RemoveGreaterKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/commands/RemoveKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/commands/RemoveKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/commands/RemoveLowerKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/commands/RemoveLowerKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/commands/ReplaceIfLow.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/commands/ReplaceIfLow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/commands/Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/commands/Save.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/commands/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/commands/Show.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/commands/UpdateId.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/commands/UpdateId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/content/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/content/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/content/StandardOfLiving.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/content/StandardOfLiving.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/util/CollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/util/CollectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/util/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/util/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/util/InternetManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/util/InternetManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/util/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/util/Receiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/util/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/util/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/src/main/java/util/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/src/main/java/util/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/commands/Clear.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/commands/Clear.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/commands/CommandAble.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/commands/CommandAble.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/commands/Exit.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/commands/Exit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/commands/FieldAscending.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/commands/FieldAscending.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/commands/Help.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/commands/Help.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/commands/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/commands/Info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/commands/Insert.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/commands/Insert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/commands/RemoveGreaterKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/commands/RemoveGreaterKey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/commands/RemoveKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/commands/RemoveKey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/commands/RemoveLowerKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/commands/RemoveLowerKey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/commands/ReplaceIfLow.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/commands/ReplaceIfLow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/commands/Save.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/commands/Save.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/commands/Show.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/commands/Show.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/commands/UpdateId.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/commands/UpdateId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/content/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/content/City.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/content/StandardOfLiving.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/content/StandardOfLiving.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/util/CollectionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/util/CollectionManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/util/CommandManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/util/CommandManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/util/InternetManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/util/InternetManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/util/Receiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/util/Receiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/classes/util/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/classes/util/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/lab-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-server/target/server.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_client/src/main/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab_client/src/main/java/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_client/src/main/java/util/IOManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab_client/src/main/java/util/IOManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_client/src/main/java/util/InternetManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab_client/src/main/java/util/InternetManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_client/src/main/java/util/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab_client/src/main/java/util/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_client/target/classes/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab_client/target/classes/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_client/target/classes/util/IOManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab_client/target/classes/util/IOManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_client/target/classes/util/InternetManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab_client/target/classes/util/InternetManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_client/target/classes/util/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/lab_client/target/classes/util/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_client/target/client.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_client/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/lab_client/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/lab_client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_client/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/lab_client/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +118,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -106,10 +131,10 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+    <property name="settings.editor.selected.configurable" value="database.data.csv.formats" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -119,18 +144,18 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Client">
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Client" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
       <module name="lab-client" />
-      <option name="PROGRAM_PARAMETERS" value="998" />
+      <option name="PROGRAM_PARAMETERS" value="1039" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Server" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server" />
       <module name="lab-server" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;D:\ITMO\Course_1\Programming\lab_6f\lab-server\src\main\java\1.csv&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="1039" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,12 +164,6 @@
       <item itemvalue="Application.Server" />
       <item itemvalue="Application.Client" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Client" />
-        <item itemvalue="Application.Server" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -171,6 +190,10 @@
       <workItem from="1665243002930" duration="860000" />
       <workItem from="1665243885961" duration="10000" />
       <workItem from="1694461147164" duration="3222000" />
+      <workItem from="1694465031442" duration="25791000" />
+      <workItem from="1694776892891" duration="25937000" />
+      <workItem from="1695069111765" duration="9291000" />
+      <workItem from="1695373469816" duration="9294000" />
     </task>
     <servers />
   </component>
@@ -188,5 +211,137 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab_client/src/main/java/util/InternetManager.java</url>
+          <line>154</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab_client/src/main/java/util/InternetManager.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab_client/src/main/java/util/InternetManager.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab_client/src/main/java/util/InternetManager.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab_client/src/main/java/util/InternetManager.java</url>
+          <line>171</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab_client/src/main/java/Client.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab_client/src/main/java/Client.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab_client/src/main/java/util/InternetManager.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab_client/src/main/java/util/InternetManager.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab_client/src/main/java/util/InternetManager.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab_client/src/main/java/util/InternetManager.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab-server/src/main/java/commands/Clear.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab-server/src/main/java/commands/Clear.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab-server/src/main/java/util/CollectionManager.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab-server/src/main/java/util/CollectionManager.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab-server/src/main/java/util/CollectionManager.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab-server/src/main/java/util/CollectionManager.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab-server/src/main/java/util/CollectionManager.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab-server/src/main/java/util/CollectionManager.java</url>
+          <line>146</line>
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/lab-server/src/main/java/util/DataBase.java</url>
+          <line>221</line>
+          <properties class="util.DataBase" method="add">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/lab-server/src/main/java/util/DataBase.java</url>
+          <line>175</line>
+          <properties class="util.DataBase" method="removeKey">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/lab-server/src/main/java/util/CollectionManager.java</url>
+          <line>143</line>
+          <properties class="util.CollectionManager" method="removeKey">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lab_6f$Server.ic" NAME="Server Coverage Results" MODIFIED="1694779924627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

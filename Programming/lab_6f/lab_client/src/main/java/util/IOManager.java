@@ -10,9 +10,6 @@ public class IOManager {
         System.out.print(str);
     }
 
-    public static boolean isFileMode() {
-        return isFileMode;
-    }
 
     public static void setIsFileMode(boolean isFileMode) {
         IOManager.isFileMode = isFileMode;
@@ -89,5 +86,14 @@ public class IOManager {
         }
 
         return en;
+    }
+
+
+    public static void error(String str) {
+        System.out.println("[31m" + str + "\u001B[0m");
+    }
+
+    public static void green(String str) {
+        System.out.println("[32m" + str + "\u001B[0m");
     }
 }

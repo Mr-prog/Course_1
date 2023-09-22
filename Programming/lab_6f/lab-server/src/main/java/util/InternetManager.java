@@ -37,9 +37,10 @@ public class InternetManager {
             selector = Selector.open();
             ssc.register(selector, OP_ACCEPT);
         } catch (BindException e) {
+            System.out.println("Неверно указан порт");
             System.exit(1);
-        } catch (IOException ignored) {
-
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -72,6 +73,23 @@ public class InternetManager {
             } catch (IOException e) {
                 e.printStackTrace();
                 sk.cancel();
+            }
+        }
+        return sc;
+    }
+
+    public SocketChannel forceAccept() {
+        try {
+            sc = ssc.accept();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if (sc != null) {
+            try {
+                sc.configureBlocking(false);
+                sc.register(selector, SelectionKey.OP_READ);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
         return sc;

@@ -9,20 +9,44 @@ public class Request implements Serializable {
     private String command;
     private String arg;
     private City obj;
+    private String login;
+    private String password;
 
     public Request(String command) {
         this.command = command;
+        this.login = Auth.getLogin();
+        this.password = Auth.getPwd();
     }
 
     public Request(String command, String arg) {
         this.command = command;
         this.arg = arg;
+        this.login = Auth.getLogin();
+        this.password = Auth.getPwd();
     }
 
     public Request(String command, String arg, City obj) {
         this.command = command;
         this.arg = arg;
         this.obj = obj;
+        this.login = Auth.getLogin();
+        this.password = Auth.getPwd();
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
@@ -31,6 +55,8 @@ public class Request implements Serializable {
                 "command='" + command + '\'' +
                 ", arg='" + arg + '\'' +
                 ", obj=" + obj +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 

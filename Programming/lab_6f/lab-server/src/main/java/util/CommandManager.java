@@ -2,6 +2,7 @@ package util;
 
 
 import commands.*;
+import exeptions.DBError;
 import exeptions.InvalidArgumentException;
 
 import java.util.HashMap;
@@ -27,27 +28,37 @@ public class CommandManager {
         commands.put("remove_lower_key", new RemoveGreaterKey(collectionManager));
         commands.put("field_ascending", new FieldAscending(collectionManager));
         commands.put("help", new Help(commands));
+        commands.put("check_user", new CheckUser());
+        commands.put("login", new Login());
+        commands.put("register", new Register());
 
     }
 
     public String run(String[] args) {
         try {
-            return commands.get(args[0]).run(args.length > 1 ? args[1] : null, null);
+            return commands.get(args[0]).run(new Request(args.length > 1 ? args[1] : null));
         } catch (NullPointerException e) {
+            if (!args[0].isEmpty()) {
+                System.out.println("Нет такой команды. Вызовите help для справки по командам.");
+            }
             return null;
         } catch (InvalidArgumentException e) {
             System.out.println(e.getMessage());
             return e.getMessage();
+        } catch (DBError e) {
+            return "\u001B[31m" + e.getMessage() + "\u001B[0m";
         }
     }
 
     public String runPrepared(Request req) {
         try {
-            return commands.get(req.getCommand()).run(req.getArg(), req.getObj());
+            return commands.get(req.getCommand()).run(req);
         } catch (NullPointerException e) {
             return null;
         } catch (InvalidArgumentException e) {
             return e.getMessage();
+        } catch (DBError e) {
+            return "\u001B[31m" + e.getMessage() + "\u001B[0m";
         }
     }
 }

@@ -11,7 +11,7 @@ public enum StandardOfLiving {
     NIGHTMARE;
 
     public static StandardOfLiving prompt() {
-        return (StandardOfLiving) IOManager.enumPrompt(StandardOfLiving.values(), "Цвет волос", " ");
+        return (StandardOfLiving) IOManager.enumPrompt(StandardOfLiving.values(), "Стандарт жизни", " ");
     }
 
     public static StandardOfLiving parse(String str) throws InvalidParameterException {
@@ -24,5 +24,7 @@ public enum StandardOfLiving {
             throw new InvalidParameterException("Нет такого варианта");
         }
     }
+
+
 }
 

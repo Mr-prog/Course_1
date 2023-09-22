@@ -18,6 +18,7 @@ commands\Show.class
 commands\ReplaceIfLow.class
 util\IOManager.class
 Client.class
+util\Auth.class
 content\Government.class
 content\City.class
 commands\Insert.class

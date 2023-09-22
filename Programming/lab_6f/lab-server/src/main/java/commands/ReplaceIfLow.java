@@ -3,7 +3,10 @@ package commands;
 
 import content.City;
 import exeptions.InvalidArgumentException;
+import exeptions.UserNotFoundException;
+import util.Auth;
 import util.CollectionManager;
+import util.Request;
 
 public class ReplaceIfLow implements CommandAble{
     CollectionManager collection;
@@ -15,17 +18,23 @@ public class ReplaceIfLow implements CommandAble{
     }
 
     @Override
-    public String run(String arg, City obj) throws InvalidArgumentException {
+    public String run(Request req) throws InvalidArgumentException {
 
-        if (arg == null){
+        try {
+            if (!Auth.checkRequest(req)) return "Ошибка авторизации: неверный пароль";
+        } catch (UserNotFoundException e) {
+            return "Ошибка авторизации: юзер не найден";
+        }
+
+        if (req.getArg() == null){
             throw new InvalidArgumentException("Эта команда требует аргумент: ключ элемента коллекции");
         }
 
-        if (!collection.contains(arg)) {
+        if (!collection.contains(req.getArg())) {
             throw new InvalidArgumentException("Элемент с таким ключом не существует");
         }
 
-        return collection.replaceIfLow(arg, obj);
+        return collection.replaceIfLow(req.getArg(), req.getObj());
     }
 
     public String getDescription() {

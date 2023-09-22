@@ -1,7 +1,10 @@
 package commands;
 
 import content.City;
+import exeptions.UserNotFoundException;
+import util.Auth;
 import util.CollectionManager;
+import util.Request;
 
 public class Exit implements CommandAble {
     CollectionManager collection;
@@ -12,9 +15,12 @@ public class Exit implements CommandAble {
     }
 
     @Override
-    public String run(String arg, City obj) {
-        collection.save();
-        System.out.println("Сохранено");
+    public String run(Request req) {
+        try {
+            if (!Auth.checkRequest(req)) return "Ошибка авторизации: неверный пароль";
+        } catch (UserNotFoundException e) {
+            return "Ошибка авторизации: юзер не найден";
+        }
         return null;
     }
 

@@ -24,6 +24,7 @@ public class City implements Serializable {
     private final Government government; //Поле может быть null
     private final StandardOfLiving standardOfLiving; //Поле не может быть null
     private final Human governor; //Поле может быть null
+    private String owner = "";
 
     public City(String name, Coordinates coordinates, LocalDate localDate, Double area, Long population, Long metersAboveSeaLevel,
                 double agglomeration, Government government, StandardOfLiving standardOfLiving, Human governor,
@@ -302,9 +303,20 @@ public class City implements Serializable {
 
     @Override
     public String toString() {
-        return "Город c id " + id + ", названием " + name + " " + coordinates + "\ndata: " + creationDate
+        return "Город c id " + id +
+                ", названием " + name +
+                "\nСоздатель: " + owner +
+                " " + coordinates + "\ndata: " + creationDate
                 + "\n" + area + " " + population + " " +
                 metersAboveSeaLevel + " " + agglomeration + " " + government + " " + standardOfLiving + governor;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 
 }
